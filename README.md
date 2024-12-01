@@ -10,6 +10,10 @@
 
 # URL path (nginx)
 
+- `brew install nginx`
+- `nginx`
+- `nginx -s reload`
+
 ```
 server {
     location /
@@ -18,3 +22,19 @@ server {
     }
 }
 ```
+```
+ng add @angular/material
+Include animation module ? Y
+```
+
+- `ng generate -c -d public/Home`
+
+
+
+
+# Change log
+
+### Fix issue of base href
+
+- Add `"externalDependencies": ["home/*"]` into angular.json
+- Change url from relative-root path '/home/abc.jpg' into relative path 'home/abc.jpg'

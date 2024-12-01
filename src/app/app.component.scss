@@ -1,0 +1,17 @@
+.div-top {
+    background-image: linear-gradient(to right, azure, lightgray);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    .menu {
+        margin-left: auto;
+        margin-right: 0;
+        width: 220px;
+        button {
+            flex-direction: column;
+            mat-icon {
+                margin-right: 0;
+            }
+        }
+    }
+}

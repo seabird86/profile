@@ -38,3 +38,7 @@ Include animation module ? Y
 
 - Add `"externalDependencies": ["home/*"]` into angular.json
 - Change url from relative-root path '/home/abc.jpg' into relative path 'home/abc.jpg'
+
+### Fix issue 404 Not found
+
+- After build, copy the file index.hmtl to 404.html and put the same folder.

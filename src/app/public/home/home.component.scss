@@ -1,65 +1,94 @@
+@font-face {
+    font-family: sologan;
+    src: url('font/Rpa03.ttf');
+}
+
 .banner {
     background-image: url('home/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    height: 500px;
-    border-radius: 10px 10px 0 0;
+    height: 40vw;
     padding-top: 1px;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 6px 4px inset, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    span {
+        margin-top: 4vw;
+        margin-left: 3vw;
+        font-family: sologan;
+        font-size: 5vw;
+        display: inline-block;
+        font-weight: bold;
+        color: azure;
+    }
 
     .avatar {
         border-radius: 50%;
         background-color: white;
-        height: 150px;
-        width: 150px;
+        height: 10vw;
+        width: 10vw;
         padding: 3px;
-        margin-top: 420px;
-        margin-left: 50px;
+        margin-left: 7vw;
+        margin-top: 28vw;
+
+        @media (max-width: 425px) {
+            margin-top: 25vw;
+        }
+
+        @media (max-width: 320px) {
+
+            margin-top: 23vw;
+        }
 
         div {
-            border-radius: 50%;
             background-image: url('home/avatar.png');
-            height: 150px;
-            width: 150px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 10vw;
+            width: 10vw;
+            vertical-align: middle;
+            border-radius: 50%;
         }
     }
+}
 
-    .intro {
-        float: left;
-        margin-top: 40px;
-        margin-left: 260px;
-        width: 400px;
-        height: 400px;
-        background-color: rgba(247, 247, 247, 0.8);
-        border-radius: 10px;
+.intro {
+    margin: 100px auto 30px auto;
+    width: 380px;
+    height: 380px;
+    background-color: rgba(247, 247, 247, 0.8);
+    border-radius: 10px;
 
-        div:first-child {
-            background-image: url('home/hand-wave.gif');
-            width: 160px;
-            height: 120px;
-            background-size: cover;
-            margin: 20px auto auto auto;
 
-        }
+    div:first-child {
+        background-image: url('home/hand-wave.gif');
+        width: 160px;
+        height: 120px;
+        background-size: cover;
+        margin: 5px auto 5px auto;
 
-        p {
-            text-align: center;
+    }
+
+    p {
+        text-align: center;
+        width: 300px;
+        margin: 20px auto 20px auto;
+        font-size: x-large;
+        color: rgb(70, 69, 69);
+        line-height: 40px;
+    }
+
+    div:nth-child(2) {
+        div {
             width: 300px;
-            margin: 40px auto 30px auto;
-            font-size: x-large;
-            color: rgb(70, 69, 69);
-            line-height: 40px;
-        }
+            height: 120px;
+            margin: 0px auto auto auto;
 
-        div:nth-child(2) {
-            div {
-                width: 300px;
-                height: 120px;
-                margin: 0px auto auto auto;
-
-                img {
-                    height: 50px;
-                    width: 50px;
-                    margin-left: 15px;
-                }
+            img {
+                height: 50px;
+                width: 50px;
+                margin-left: 15px;
             }
         }
     }

@@ -3,7 +3,8 @@
     margin-bottom: 10px;
     display: flex;
     height: 50px;
-    span{
+
+    span {
         font-family: "Protest Revolution", sans-serif;
         font-size: 20px;
         display: inline-block;
@@ -25,5 +26,27 @@
         flex-flow: row;
         padding: 5px 0 5px 0;
         margin-left: auto;
+    }
+}
+
+footer {
+    margin-top: 4vw;
+    text-align: center;
+
+    font-weight: 100;
+    font-size: 15px;
+
+    a {
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        color: purple;
+
+        &:hover {
+            color: blue;
+        }
+    }
+
+    p {
+        font-family: "ui-monospace", "Nunito", sans-serif;
     }
 }

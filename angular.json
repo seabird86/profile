@@ -36,7 +36,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "externalDependencies": ["home/*","font/*"]
+            "externalDependencies": ["home/*"]
           },
           "configurations": {
             "production": {

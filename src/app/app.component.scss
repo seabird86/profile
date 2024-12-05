@@ -1,17 +1,29 @@
 .div-top {
     background-image: linear-gradient(to right, azure, lightgray);
-    padding-bottom: 10px;
-    padding-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    height: 50px;
+    span{
+        font-family: "Protest Revolution", sans-serif;
+        font-size: 20px;
+        display: inline-block;
+        font-weight: bold;
+        color: purple;
+        line-height: 50px;
+        margin-left: 8px;
+    }
+
+    img {
+        margin-left: 1vw;
+        padding: 2px;
+        height: 90%;
+        aspect-ratio: 1;
+    }
+
     .menu {
+        display: flex;
+        flex-flow: row;
+        padding: 5px 0 5px 0;
         margin-left: auto;
-        margin-right: 0;
-        width: 220px;
-        button {
-            flex-direction: column;
-            mat-icon {
-                margin-right: 0;
-            }
-        }
     }
 }

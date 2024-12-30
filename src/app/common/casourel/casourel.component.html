@@ -1,0 +1,18 @@
+@for (slide of slides; track $index) {
+@if (slide.class!=="void"){
+<div (@swap.done)="onDone($event, $index)" [@swap]="slide.class">
+    <img [src]="slide.src" alt="{{ slide.title }}" class="d-block w-100" loading="lazy" />
+    <div class="title">
+        <h3>{{slide.title}}</h3>
+        <p>{{slide.subtitle}}</p>
+    </div>
+</div>
+}
+}
+
+<button mat-icon-button (click)="prev()" class="left-arrow">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+</button>
+<button mat-icon-button (click)="next()" class="right-arrow">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+</button>

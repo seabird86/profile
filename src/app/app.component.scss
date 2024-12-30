@@ -1,48 +1,52 @@
-.div-top {
-    background-image: linear-gradient(to right, azure, lightgray);
-    margin-bottom: 10px;
-    display: flex;
-    height: 50px;
+mat-toolbar {
+    .spacer {
+        flex: auto;
+    }
 
     span {
         font-family: "Protest Revolution", sans-serif;
-        font-size: 20px;
-        display: inline-block;
         font-weight: bold;
         color: purple;
-        line-height: 50px;
         margin-left: 8px;
     }
 
     img {
-        margin-left: 1vw;
-        padding: 2px;
+        margin-left: 0.5vw;
         height: 90%;
-        aspect-ratio: 1;
     }
 
-    .menu {
-        display: flex;
-        flex-flow: row;
-        padding: 5px 0 5px 0;
-        margin-left: auto;
+    @media (max-width: 425px) {
+        padding: 0px;
     }
 }
 
-footer {
-    margin-top: 4vw;
-    text-align: center;
+:host {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    :nth-child(2){
+        flex: 1;
+    }
+    // :nth-last-child(2) {
+    //     flex: 1
+    // }
+}
 
+footer {
+    text-align: center;
     font-weight: 100;
     font-size: 15px;
+    background-color: rgb(40, 42, 53);
+    padding: 10px 10px;
+    color: white;
 
     a {
         text-decoration: none;
         font-family: "Roboto", sans-serif;
-        color: purple;
+        color: orange;
 
         &:hover {
-            color: blue;
+            color: yellow;
         }
     }
 

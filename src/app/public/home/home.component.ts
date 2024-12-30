@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { CasourelComponent } from "../../common/casourel/casourel.component";
 
 @Component({
     selector: 'app-home',
-    imports: [MatCardModule],
+    imports: [MatCardModule, CasourelComponent],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

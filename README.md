@@ -42,3 +42,27 @@ Include animation module ? Y
 ### Fix issue 404 Not found
 
 - After build, copy the file index.hmtl to 404.html and put the same folder.
+
+### highlightjs
+ 
+- Highlightjs + Line Number + Copy button
+- Declare script and init for copy button plugin in index.html
+- Npm install highlightjs only to get declaration type, add interface for highlighjs line number.
+- Using the function `highlightElement` for copy button feature instead of using `highlight`
+- Stop using ngx-highlightjs
+
+### Import src/app by alias @app
+
+- Declare in tsconfig.json
+
+```json
+"compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": [
+        "./app/*"
+      ]
+    }
+}
+```
+- Using `import ... from '@app/...';`

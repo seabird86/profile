@@ -34,6 +34,9 @@ body {
     animation: flicker 2s infinite;
 }
 
+.hljs-copy-wrapper{
+    background-color: #282c34;
+}
 
 .hljs-ln-numbers {
     -webkit-touch-callout: none;
@@ -50,7 +53,6 @@ body {
     padding-right: 10px !important
 }
 
-/* for block of code */
 .hljs-ln-code {
     padding-left: 10px !important
 }

@@ -1,0 +1,70 @@
+<div>
+    <h1 style="text-align: center;">Using highlightjs in Angular</h1>
+
+    <h3>Purpose</h3>
+    <ul>
+    <li>As an angular developer, how to create a directive that shows a code snippet from <a href="https://gist.github.com/">https://gist.github.com</a> in your angular application. It should highlight syntax, display line number and copy button. </li>
+    <li>I tried to use the package ngx-highlightjs. But I cannot add more plugin <mark>copy button</mark> and customize <mark>fromLine</mark> and <mark>toLine</mark> in this library. So, I developed another way to implement these feature without this package.</li>
+    </ul> 
+    <h3>Result</h3>
+
+    <pre>
+        <code appHighlight url="https://gist.githubusercontent.com/seabird86/be052049a0974bab9a01e56c8b837910/raw/d919cb90dbb7999db43dcac0271b5c9ca8ec644a/highlight.directive.ts" class="language-typescript" fromLine=4 toLine="10" ></code>
+    </pre>
+
+    <h3>How to do</h3>
+    <ul>
+    <li>Add the following lines in the src/index.html</li>
+    </ul>
+    <pre>
+        <code appHighlight url="https://gist.githubusercontent.com/seabird86/7f3baf51f13d3a8501289398a9ea6d0a/raw/7d2a89ebd8faed267436415a0386e28e346cb7f9/highlight-index.html" class="language-xml" fromLine=17 toLine="25"></code>
+    </pre>
+    <ul>
+        <li>You need to add the &#60;script&#62; that supports the language you would like to highlight. In my example, I use typescript.min.js</li>
+    </ul>
+    <ul>
+        <li>Install <mark>highlightjs</mark> package. We will only use the Typescript declaration file of this package in the directive file.</li>
+    </ul>
+    <pre>
+        <code>npm install highlight.js</code>
+    </pre>
+    <ul>
+        <li>Create a directive like the following code:</li>
+    </ul>
+    <pre>
+        <code appHighlight url="https://gist.githubusercontent.com/seabird86/be052049a0974bab9a01e56c8b837910/raw/573e2bf4988f019b32f91ab95ac30c1ea072900d/highlight.directive.ts" class="language-typescript" ></code>
+    </pre>
+    <ul>
+        <li>You need some utilities to find the index of break line character and replace escape html characters</li>
+    </ul>
+    <pre>
+        <code appHighlight url="https://gist.githubusercontent.com/seabird86/ad178d1961208d638a7801b0c4d5cc27/raw/af27ea9a14968b01e0a30308661430ccdd0cb949/string.utils.ts" class="language-typescript" ></code>
+    </pre>
+
+    <ul>
+        <li>In the directive file, we use the function `highlightElement` for the `copy button` feature instead of using the function `highlight` as in the package ngx-highlightjs.</li>
+    </ul>
+
+    <ul>
+        <li>Don't forget css for highlightjs-line-numbers</li>
+    </ul>
+    <pre>
+        <code appHighlight url="https://gist.githubusercontent.com/seabird86/8173b3b97fd07462c50f551cc12dc2ce/raw/ab61ce023dabec544cfbdc9a9a703fdb0b215968/highlightjs.css" class="language-css" ></code>
+    </pre>
+
+    <ul>
+        <li>Finally, you can use these attributes like appHighlight, url, class, fromLine, toLine to display your code snippet. You must put them into tags &#60;pre&#62; and &#60;code&#62; to apply css of highlightjs.</li>
+    </ul>
+    <pre>
+        <code appHighlight url="https://gist.githubusercontent.com/seabird86/d1b6bc6eb1bda532ee411d1e56bd8b0f/raw/f7e086d65f70aac1f59e767af1c8ecc3ea32fd12/highlightjs-guide.html" class="language-xml" ></code>
+    </pre>
+    
+    <h3>References:</h3>
+    <p><i>Thanks for the authors who developed the below libraries, published and shared to everyone.</i></p>
+    <ol>
+    <li><a href="https://highlightjs.org">https://highlightjs.org</a></li>
+    <li><a href="https://github.com/wcoder/highlightjs-line-numbers.js">https://github.com/wcoder/highlightjs-line-numbers.js</a></li>
+    <li><a href="https://github.com/arronhunt/highlightjs-copy">https://github.com/arronhunt/highlightjs-copy</a></li>
+    <li><a href="https://github.com/MurhafSousli/ngx-highlightjs">https://github.com/MurhafSousli/ngx-highlightjs</a></li>
+    </ol>
+</div>

@@ -34,7 +34,7 @@ body {
     animation: flicker 2s infinite;
 }
 
-.hljs-copy-wrapper {
+pre {
 
     code {
         border-radius: 8px;
@@ -53,7 +53,7 @@ body {
             font-size: 0.8em;
             line-height: 1.5em;
         }
-        
+
         .hljs-ln-numbers {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -61,28 +61,28 @@ body {
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-    
+
             text-align: right;
             color: #ccc;
             border-right: 1px solid #CCC;
             vertical-align: top;
             padding-right: 10px !important
         }
-    
+
         .hljs-ln-code {
             padding-left: 10px !important
         }
     }
-    
-    .hljs-copy-button{
-        top: 1.5em;
+
+    .hljs-copy-button {
+        top: 2.1em;
         right: 10px;
         padding: 4px 12px;
     }
 }
 
-app-blog{
-    li{
+app-blog {
+    li {
         margin-bottom: 0.5em;
     }
 }

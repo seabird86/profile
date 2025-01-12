@@ -7,7 +7,7 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 @keyframes flicker {
@@ -37,30 +37,52 @@ body {
 .hljs-copy-wrapper {
 
     code {
-        padding: 2em 1em !important
-    }
+        border-radius: 8px;
+        padding: 2em 1em !important;
 
-    .hljs-ln-numbers {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+        font-size: 1.2em;
+        line-height: 1.8em;
 
-        text-align: right;
-        color: #ccc;
-        border-right: 1px solid #CCC;
-        vertical-align: top;
-        padding-right: 10px !important
-    }
 
-    .hljs-ln-code {
-        padding-left: 10px !important
+        @media (max-width: 768px) {
+            font-size: 1em;
+            line-height: 1.6em;
+        }
+
+        @media (max-width: 425px) {
+            font-size: 0.8em;
+            line-height: 1.5em;
+        }
+        
+        .hljs-ln-numbers {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    
+            text-align: right;
+            color: #ccc;
+            border-right: 1px solid #CCC;
+            vertical-align: top;
+            padding-right: 10px !important
+        }
+    
+        .hljs-ln-code {
+            padding-left: 10px !important
+        }
     }
+    
     .hljs-copy-button{
         top: 1.5em;
         right: 10px;
         padding: 4px 12px;
+    }
+}
+
+app-blog{
+    li{
+        margin-bottom: 0.5em;
     }
 }

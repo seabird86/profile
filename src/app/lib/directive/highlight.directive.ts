@@ -20,26 +20,34 @@ const hljs: HLJSApi & HLJSLineNumber = (window as any)['hljs'];
 @Injectable()
 export class HighlightDirective implements OnInit {
 
-  url = input.required<string>();
+  url = input<string>();
   fromLine = input<number, string>(1, { transform: numberAttribute });
   toLine = input<number, string>(0, { transform: numberAttribute });
 
   constructor(private eRef: ElementRef, private sanitizer: DomSanitizer, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get(this.url(), { responseType: 'text' }).subscribe(resp => {
-      const fromIndex = (this.fromLine() == 1) ? 0 : StringUtils.indexOf(resp, '\n', this.fromLine() - 1) + 1;
-      const toIndex = (this.toLine() != 0) ? StringUtils.indexOf(resp, '\n', this.toLine()) + 1 : undefined;
-      const code = resp.slice(fromIndex, toIndex);
-      this.eRef.nativeElement.innerHTML = this.sanitizer.sanitize(SecurityContext.HTML, StringUtils.escapeHtml(code));
-      requestAnimationFrame(() => {
-        hljs.highlightElement(this.eRef.nativeElement);
-        hljs.lineNumbersBlock(this.eRef.nativeElement, {
-          singleLine: false,
-          startFrom: this.fromLine()
-        });
+    if (this.url()) {
+      this.http.get(this.url() || '', { responseType: 'text' }).subscribe(resp => {
+        const fromIndex = (this.fromLine() == 1) ? 0 : StringUtils.indexOf(resp, '\n', this.fromLine() - 1) + 1;
+        const toIndex = (this.toLine() != 0) ? StringUtils.indexOf(resp, '\n', this.toLine()) + 1 : undefined;
+        const code = resp.slice(fromIndex, toIndex);
+        this.eRef.nativeElement.innerHTML = this.sanitizer.sanitize(SecurityContext.HTML, StringUtils.escapeHtml(code));
+        this.highlight();
+      });
+    }else {
+      this.highlight();
+    }
+  }
+
+  private highlight(){
+    requestAnimationFrame(() => {
+      hljs.highlightElement(this.eRef.nativeElement);
+      hljs.lineNumbersBlock(this.eRef.nativeElement, {
+        singleLine: false,
+        startFrom: this.fromLine()
       });
     });
   }
-  
+
 }

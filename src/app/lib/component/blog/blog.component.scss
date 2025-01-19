@@ -7,19 +7,39 @@
         line-height: 1.5em;
 
         @media (max-width: 425px) {
-            width: 90vw;            
+            width: 90vw;
         }
-        ul{
+        ul {
             @media (max-width: 425px) {
-                padding-left: 20px;            
+                padding-left: 20px;
             }
         }
-        
     }
 
     h1 {
         text-align: center;
         font-family: "Raleway";
         font-weight: bold;
+    }
+
+    @mixin index-content {
+        color: brown;
+        display: block;
+
+        &:hover {
+            color: darkblue;
+            cursor: pointer;
+        }
+    }
+
+    a.h2, a.h3 {
+        @include index-content();
+    }
+
+    a.h2 {
+        margin-left: 1vw;
+    }
+    a.h3 {
+        margin-left: 2vw;
     }
 }

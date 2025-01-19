@@ -1,9 +1,13 @@
+<br/><br/>
 <h1>
     <ng-content select="blog-header"></ng-content>
 </h1>
 <div>
-    <!-- <ng-content select="blog-outline"></ng-content> -->
+    <h3>Table of Contents</h3>
+    @for (node of nodes(); track $index) {
+        <a (click)="scrollTo(node)" class="{{node.localName}}">{{node.innerText}}</a>
+    }
 </div>
-<div>
+<div #blogContent>
     <ng-content select="blog-content"></ng-content>
 </div>

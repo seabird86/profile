@@ -5,34 +5,65 @@
     </div>
 </div>
 <div class="intro">
-    <div></div>
+    <h1 class="fire">Love and great experience on</h1>    
     <div>
-        <p>As a full-stack developer !<br />Great experience on ...</p>
-        <div>
-            <img src="home/java.webp" title="Java"/>
-            <img src="home/spring.webp" title="Spring"/>
-            <img src="home/angular.webp" title="Angular"/>
-            <img src="home/react.webp" title="React"/>
-            <img src="home/aws.webp" title="AWS"/>
-            <img src="home/playwright.webp" title="Playwright"/>
-            <img src="home/k6.webp" title="K6"/>
-            <img src="home/cicd.webp" title="CICD"/>
-        </div>
+        <img src="home/java.webp" title="Java" />
+        <img src="home/spring.webp" title="Spring" />
+        <img src="home/angular.webp" title="Angular" />
+        <img src="home/react.webp" title="React" />
+        <img src="home/aws.webp" title="AWS" />
+        <img src="home/playwright.webp" title="Playwright" />
+        <img src="home/k6.webp" title="K6" />
+        <img src="home/cicd.webp" title="CICD" />
     </div>
 </div>
-<div style="width: 600px; height: 400px;margin:0px auto">
-    <app-casourel></app-casourel>
+
+<div class="blogs">
+    <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title><a routerLink="/angular/highlightjs-guide">Display a code block with HighlightJs</a></mat-card-title>
+                <mat-card-subtitle>Angular, Directive, gist, Highlightjs, lineNumber, Copy Button</mat-card-subtitle>                
+            </mat-card-title-group>
+            <span class="spacer"></span>
+            <div>
+                <img src="home/angular.webp" title="Angular" />
+                <img src="home/hljs.webp" title="Highlightjs" />
+            </div>
+        </mat-card-header>        
+        <mat-card-content>
+            Ngx-highlightjs is hard to add the plugins <code>copy-button</code> and set the range of <code>line numbers</code>. Instead of using this package, I created my angular directive to highlight code with the plugins of highlightjs such as copy button and line number.
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title><a routerLink="/angular/content-table-guide">Display a Table of Contents</a></mat-card-title>
+                <mat-card-subtitle>Angular, viewChild, Depth-first Search, scrollIntoView</mat-card-subtitle>
+            </mat-card-title-group>
+            <span class="spacer"></span>
+            <div>
+                <img src="home/angular.webp" title="Angular" />
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+                How to display a Table of Contents in a web page. This table will list all of heading tags and navigate readers to these heading's content position.
+        </mat-card-content>
+    </mat-card>
+
 </div>
-<ul>
-    <li><a routerLink="/angular/highlightjs-guide">How to Highlight your code snippet</a></li>
-    <li><a routerLink="/angular/content-table-guide">How to build a Table of Contents</a></li>
-</ul>
 
 <div class="greeting">
     <img src="home/say-hi.gif">
     <div>
         <h2>Nice to Meet You</h2>
-        <p>Hi, My name's Anh. I'm from Vietnam and you can call me 'Kris'. This place where I can share my greatest inspiration and candidly display the different sides of my passion project. I invite you to explore my content and learn about what makes me tick. Please reach out and engage—I’m happy to hear from you, as well.</p>
+        <p>Hi, My name's Anh. I'm from Vietnam and you can call me 'Kris'. This place where I can share my greatest
+            inspiration and candidly display the different sides of my passion project. I invite you to explore my
+            content and learn about what makes me tick. Please reach out and engage—I’m happy to hear from you, as well.
+        </p>
     </div>
 </div>
+<!-- <div style="width: 600px; height: 400px;margin:0px auto">
+    <app-casourel></app-casourel>
+</div> -->
 <div class="map"></div>

@@ -4,7 +4,7 @@
 <div>
     <h3>Table of Contents</h3>
     @for (node of nodes(); track $index) {
-        <a (click)="scrollTo(node)" class="{{node.localName}}">{{node.innerText}}</a>
+        <a (click)="scrollTo(node)" class="{{node.localName}}">{{node.innerText}}</a><br/>
     }
 </div>
 <div #blogContent>

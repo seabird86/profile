@@ -24,7 +24,7 @@
 
     @mixin index-content {
         color: brown;
-        display: block;
+        display: inline-block;
 
         &:hover {
             color: darkblue;

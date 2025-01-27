@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HighlightDirective } from '@app/lib/directive/highlight.directive';
 
 @Component({
-  selector: 'app-casourel-guide',
+  selector: 'blog-casourel',
   imports: [CommonModule, HighlightDirective],
-  templateUrl: './casourel-guide.component.html'
+  templateUrl: './casourel-blog.component.html'
 })
-export class CasourelGuideComponent {
+export class CasourelBlogComponent {
 }

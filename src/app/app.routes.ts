@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from '@app/home/home.component';
-import { CasourelGuideComponent } from '@app/angular/casourel-guide/casourel-guide.component';
-import { HighlightjsGuideComponent } from '@app/angular/highlightjs-guide/highlightjs-guide.component';
-import { ContentTableGuideComponent } from '@app/angular/content-table-guide/content-table-guide.component';
+import { CasourelBlogComponent } from '@app/blog/angular/casourel/casourel-blog.component';
+import { HighlightjsBlogComponent } from '@app/blog/angular/highlightjs/highlightjs-blog.component';
+import { ContentTableBlogComponent } from '@app/blog/angular/content-table/content-table-blog.component';
+import { FireflyBlogComponent } from '@app/blog/angular/firefly/firefly-blog.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'angular/casourel-guide', component: CasourelGuideComponent },
-    { path: 'angular/highlightjs-guide', component: HighlightjsGuideComponent },
-    { path: 'angular/content-table-guide', component: ContentTableGuideComponent }
+    { path: '', component: HomeComponent },
+    { path: 'blog/angular/casourel', component: CasourelBlogComponent },
+    { path: 'blog/angular/highlightjs', component: HighlightjsBlogComponent },
+    { path: 'blog/angular/content-table', component: ContentTableBlogComponent },
+    { path: 'blog/angular/firefly', component: FireflyBlogComponent }
 ];

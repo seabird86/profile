@@ -85,7 +85,12 @@ app-blog {
     li {
         margin-bottom: 0.5em;
     }
+
+    p {
+        text-align: justify;
+    }
 }
+
 a {
     text-decoration: none;
 }

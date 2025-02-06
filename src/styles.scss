@@ -40,18 +40,16 @@ pre {
         border-radius: 8px;
         padding: 2em 1em !important;
 
-        font-size: 1.2em;
-        line-height: 1.8em;
+        font-size: medium;
+        line-height: 1.8;
 
 
         @media (max-width: 768px) {
-            font-size: 1em;
-            line-height: 1.6em;
+            font-size: medium;
         }
 
         @media (max-width: 425px) {
-            font-size: 0.8em;
-            line-height: 1.5em;
+            font-size: x-small;
         }
 
         .hljs-ln-numbers {

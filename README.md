@@ -66,3 +66,9 @@ Include animation module ? Y
 }
 ```
 - Using `import ... from '@app/...';`
+
+- Upgrade angular/
+
+```shell
+ng update @angular/cli @angular/core @angular/cdk @angular/material --force --allow-dirty
+```

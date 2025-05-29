@@ -13,6 +13,7 @@
         >div {
             width: 100%;
             display: flex;
+
             >:nth-child(1) {
 
                 display: flex;
@@ -58,5 +59,16 @@
                 margin-bottom: 15px;
             }
         }
+    }
+
+    .map {
+        background-image: url('info/map.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 3.1;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: 15px auto;
     }
 }

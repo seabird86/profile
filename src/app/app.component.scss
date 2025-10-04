@@ -1,0 +1,56 @@
+mat-toolbar {
+    .spacer {
+        flex: auto;
+    }
+
+    span {
+        font-family: "Protest Revolution", sans-serif;
+        font-weight: bold;
+        color: purple;
+        margin-left: 8px;
+    }
+
+    img {
+        margin-left: 0.5vw;
+        height: 90%;
+    }
+
+    @media (max-width: 425px) {
+        padding: 0px;
+    }
+}
+
+:host {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    :nth-child(2){
+        flex: 1;
+    }
+    // :nth-last-child(2) {
+    //     flex: 1
+    // }
+}
+
+footer {
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+    background-color: rgb(40, 42, 53);
+    padding: 10px 10px;
+    color: white;
+
+    a {
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        color: orange;
+
+        &:hover {
+            color: yellow;
+        }
+    }
+
+    p {
+        font-family: "ui-monospace", "Nunito", sans-serif;
+    }
+}

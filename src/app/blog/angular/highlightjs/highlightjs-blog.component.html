@@ -1,0 +1,67 @@
+<app-blog>
+    <blog-header>Display a code block with HighlightJs</blog-header>
+    <blog-content>
+        <h2>1. Purpose</h2>
+        <ul>
+            <li>As an angular developer, I would like to create a directive that shows a code snippet of a file from the link <a href="https://gist.github.com/">https://gist.github.com</a>. It should support multiple languages to highlight syntax, display line numbers and copy button. </li>
+            <li>There is a package ngx-highlightjs but it's hard to add <b>copy button</b> as well as support the options <b>fromLine</b> & <b>toLine</b> . So, I don't use this package and implemented another way.</li>
+            <li>The result is:</li>
+        </ul>
+        <pre>
+            <code appHighlight url="https://gist.githubusercontent.com/seabird86/be052049a0974bab9a01e56c8b837910/raw/d919cb90dbb7999db43dcac0271b5c9ca8ec644a/highlight.directive.ts" class="language-typescript" fromLine=4 toLine="10" ></code>
+        </pre>
+        <h2>2. How to do</h2>
+        <ul>
+        <li>Add the following lines in the src/index.html</li>
+        </ul>
+        <pre>
+            <code appHighlight url="https://gist.githubusercontent.com/seabird86/7f3baf51f13d3a8501289398a9ea6d0a/raw/7d2a89ebd8faed267436415a0386e28e346cb7f9/highlight-index.html" class="language-xml" fromLine=17 toLine="25"></code>
+        </pre>
+        <ul>
+            <li>In the code block, I defined <code>typescript.min.js</code> in the tag &#60;script&#62; to support the language typescript in code snippet.</li>
+            <li>We need to use the Typescript declaration file of the package <code>highlightjs</code>. So, let's install the package. </li>
+        </ul>
+        <pre>
+            <code appHighlight class="language-shell">npm install highlight.js</code>
+        </pre>
+        <ul>
+            <li>Create a directive like the following code:</li>
+        </ul>
+        <pre>
+            <code appHighlight url="https://gist.githubusercontent.com/seabird86/be052049a0974bab9a01e56c8b837910/raw/573e2bf4988f019b32f91ab95ac30c1ea072900d/highlight.directive.ts" class="language-typescript" ></code>
+        </pre>
+        <ul>
+            <li>You need some utilities to find the index of the character <i>Line Break</i> and replace any html escape characters</li>
+        </ul>
+        <pre>
+            <code appHighlight url="https://gist.githubusercontent.com/seabird86/ad178d1961208d638a7801b0c4d5cc27/raw/af27ea9a14968b01e0a30308661430ccdd0cb949/string.utils.ts" class="language-typescript" ></code>
+        </pre>
+
+        <ul>
+            <li>In the directive file, we use the function `highlightElement` for the `copy button` feature instead of using the function `highlight` as in the package ngx-highlightjs.</li>
+        </ul>
+
+        <ul>
+            <li>Don't forget css for highlightjs-line-numbers</li>
+        </ul>
+        <pre>
+            <code appHighlight url="https://gist.githubusercontent.com/seabird86/8173b3b97fd07462c50f551cc12dc2ce/raw/ab61ce023dabec544cfbdc9a9a703fdb0b215968/highlightjs.css" class="language-css" ></code>
+        </pre>
+        <ul>
+            <li>Finally, you can use these attributes like appHighlight, url, class, fromLine, toLine to display your code snippet. You must put them into tags <code>&#60;pre&#62;</code> and <code>&#60;code&#62;</code> to apply css of highlightjs.</li>
+        </ul>
+        <pre>
+            <code appHighlight url="https://gist.githubusercontent.com/seabird86/d1b6bc6eb1bda532ee411d1e56bd8b0f/raw/f7e086d65f70aac1f59e767af1c8ecc3ea32fd12/highlightjs-guide.html" class="language-xml" ></code>
+        </pre>
+        <h2>3. Conclusion</h2>
+        <p>Instead of the package <code>ngx-highlightjs</code>, you can use directly the package <code>highlightjs</code> to add more the features you want. Instead of getting the file content from <a href="https://gist.github.com/">https://gist.github.com</a>, you can also customize your code to highlight the content in your tag <code>&#60;pre&#62;</code> and <code>&#60;code&#62;</code>. Good luck!</p>
+        <h2>4. References</h2>
+        <p><i>Thanks for the authors who developed the below libraries, published and shared to everyone.</i></p>
+        <ol>
+        <li><a href="https://highlightjs.org" target="_blank">https://highlightjs.org</a></li>
+        <li><a href="https://github.com/wcoder/highlightjs-line-numbers.js" target="_blank">https://github.com/wcoder/highlightjs-line-numbers.js</a></li>
+        <li><a href="https://github.com/arronhunt/highlightjs-copy" target="_blank">https://github.com/arronhunt/highlightjs-copy</a></li>
+        <li><a href="https://github.com/MurhafSousli/ngx-highlightjs" target="_blank">https://github.com/MurhafSousli/ngx-highlightjs</a></li>
+        </ol>
+    </blog-content>
+</app-blog>

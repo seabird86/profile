@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <img src="home/avatar2.png" />
+  <span>Kris</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/"><mat-icon fontIcon="home" />Home</button>
+  <button mat-button routerLink="about/info"><mat-icon fontIcon="info" />About</button>
+  <button mat-button>
+    <mat-icon fontIcon="wysiwyg"></mat-icon>
+    Blog
+  </button>
+</mat-toolbar>
+<div>
+  <router-outlet />
+</div>
+<footer>
+  <p><a href="mailto:seabird86@gmail.com">seabird86&#64;gmail.com</a></p>
+  <p>&copy;2002 created by Kris Nguyen</p>
+</footer>

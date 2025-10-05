@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
+
 import { MatButtonModule } from '@angular/material/button';
 import { trigger, state, style, animate, transition, AnimationEvent } from '@angular/animations';
 
 @Component({
   selector: 'app-casourel',
-  imports: [MatIconModule, CommonModule, MatButtonModule],
+  imports: [MatIconModule, MatButtonModule],
   templateUrl: './casourel.component.html',
   styleUrl: './casourel.component.scss',
   animations: [

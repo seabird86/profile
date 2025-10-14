@@ -33,7 +33,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "externalDependencies": ["home/*","info/*","md/*"]
+            "externalDependencies": ["home/*","info/*","blog/*","api/*"]
           },
           "configurations": {
             "production": {

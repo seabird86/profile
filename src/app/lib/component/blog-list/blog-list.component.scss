@@ -1,0 +1,46 @@
+mat-card {
+    margin-top: 2vw;
+    min-height: 300px;
+    padding: 25px;
+    border-color: pink;
+    border-style: dashed;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+
+    @media (max-width: 425px) {
+        padding: 5px;
+        border-color: honeydew;
+    }
+
+    mat-card-header {
+        a {
+            color: purple;
+
+            &:hover {
+                color: brown;
+            }
+        }
+
+        mat-card-subtitle {
+            padding: 10px 0px;
+            font-family: 'Courier New', Courier, monospace;
+            color: darkolivegreen;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+    }
+}
+
+mat-card-content {
+    color: darkslategray;
+    padding-top: 10px;
+    line-height: 1.6em;
+    font-family: "Raleway";
+    text-align: justify;
+}

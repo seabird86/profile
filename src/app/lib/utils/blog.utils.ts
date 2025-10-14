@@ -1,15 +1,25 @@
 import fm from 'front-matter';
 import * as fs from 'fs';
 
-interface Metadata {
+export interface BlogMetadata {
     name: string;
-    attributes: any;
+    attributes: BlogAttributes;
 }
+
+export interface BlogAttributes {
+    title: string;
+    summary: string;
+    date: string;
+    tags: string[];
+    keys: string[];
+}
+
+
 export class BlogUtils {
-    getMetadata(directoryPath: string): Metadata[] {
+    getMetadata(directoryPath: string): BlogMetadata[] {
         try {
             const files = fs.readdirSync(directoryPath);
-            const metadatas: Metadata[] = [];
+            const metadatas: BlogMetadata[] = [];
             for (const item of files) {
                 const itemPath = `${directoryPath}/${item}`;
                 const stats = fs.statSync(itemPath);
@@ -22,7 +32,7 @@ export class BlogUtils {
                     const { attributes, body } = fm(content);
                     metadatas.push({
                         name: itemPath.replace('public/md/', ''),
-                        attributes: attributes
+                        attributes: attributes as BlogAttributes
                     });
                 }
             }
@@ -33,8 +43,8 @@ export class BlogUtils {
         }
     }
 
-    writeMetadata(metadatas: Metadata[]) {
-        const filePath = 'public/api/blogs';
+    writeMetadata(metadatas: BlogMetadata[]) {
+        const filePath = 'public/api/blogs.json';
         const content = JSON.stringify(metadatas, null, 2);
         try {
             fs.writeFileSync(filePath, content, { encoding: 'utf8' });
@@ -45,7 +55,7 @@ export class BlogUtils {
     }
 
     extract() {
-        const metadatas: Metadata[] = this.getMetadata('public/md');
+        const metadatas: BlogMetadata[] = this.getMetadata('public/blog');
         console.log("metadatas", metadatas);
         this.writeMetadata(metadatas);
     };

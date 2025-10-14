@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "blog": "node src/app/lib/utils/md.utils.ts",
+    "blog": "node src/app/lib/utils/blog.utils.ts",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

@@ -1,9 +1,10 @@
 ---
 title: "Display a Table of Contents"
-date: "01 May 2024"
+date: "01 Aug 2024"
 readingTime: 3 min read
-tags: [Angular, SCSS]
-summary: "How to display the colorful fireflies effect as I did in this Home page."
+keys: [Angular, viewChild, Depth-first Search, scrollIntoView]
+tags: [angular]
+summary: "How to display a Table of Contents in a web page. This table will list all of heading tags and navigate readers to these heading's content position."
 ---
 
 ## 1. Purpose

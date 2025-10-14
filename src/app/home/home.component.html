@@ -24,53 +24,10 @@
 </div>
 
 <div class="blogs">
-    <mat-card appearance="outlined">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title><a routerLink="/blog/angular/highlightjs">Display a code block with HighlightJs</a></mat-card-title>
-                <mat-card-subtitle>Angular, Directive, gist, Highlightjs, lineNumber, Copy Button</mat-card-subtitle>                
-            </mat-card-title-group>
-            <span class="spacer"></span>
-            <div>
-                <img src="home/angular.webp" title="Angular" />
-                <img src="home/hljs.webp" title="Highlightjs" />
-            </div>
-        </mat-card-header>        
-        <mat-card-content>
-            Ngx-highlightjs is hard to add the plugins <code>copy-button</code> and set the range of <code>line numbers</code>. Instead of using this package, I created my angular directive to highlight code with the plugins of highlightjs such as copy button and line number.
-        </mat-card-content>
-    </mat-card>
-    <mat-card appearance="outlined">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title><a routerLink="/blog/angular/content-table">Display a Table of Contents</a></mat-card-title>
-                <mat-card-subtitle>Angular, viewChild, Depth-first Search, scrollIntoView</mat-card-subtitle>
-            </mat-card-title-group>
-            <span class="spacer"></span>
-            <div>
-                <img src="home/angular.webp" title="Angular" />
-            </div>
-        </mat-card-header>
-        <mat-card-content>
-                How to display a Table of Contents in a web page. This table will list all of heading tags and navigate readers to these heading's content position.
-        </mat-card-content>
-    </mat-card>
-    <mat-card appearance="outlined">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title><a routerLink="/blog/angular/firefly">Display the colorful fireflies effect</a></mat-card-title>
-                <mat-card-subtitle>Angular, SCSS</mat-card-subtitle>
-            </mat-card-title-group>
-            <span class="spacer"></span>
-            <div>
-                <img src="home/angular.webp" title="Angular" />
-                <img src="home/scss.svg" title="SCSS" />
-            </div>
-        </mat-card-header>
-        <mat-card-content>
-                How to display the colorful fireflies effect as I did in this Home page.
-        </mat-card-content>
-    </mat-card>
+    <app-blog-list></app-blog-list>
+
+
+    
 
 </div>
 

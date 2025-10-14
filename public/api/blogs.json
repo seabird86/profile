@@ -1,39 +1,56 @@
 [
   {
-    "name": "angular/content-table.md",
+    "name": "public/blog/angular/content-table.md",
     "attributes": {
       "title": "Display a Table of Contents",
-      "date": "01 May 2024",
+      "date": "01 Aug 2024",
       "readingTime": "3 min read",
-      "tags": [
+      "keys": [
         "Angular",
-        "SCSS"
+        "viewChild",
+        "Depth-first Search",
+        "scrollIntoView"
       ],
-      "summary": "How to display the colorful fireflies effect as I did in this Home page."
+      "tags": [
+        "angular"
+      ],
+      "summary": "How to display a Table of Contents in a web page. This table will list all of heading tags and navigate readers to these heading's content position."
     }
   },
   {
-    "name": "angular/firefly.md",
+    "name": "public/blog/angular/firefly.md",
     "attributes": {
       "title": "Display the colorful fireflies effect",
       "date": "01 May 2024",
       "readingTime": "3 min read",
-      "tags": [
+      "keys": [
         "Angular",
         "SCSS"
+      ],
+      "tags": [
+        "angular",
+        "scss"
       ],
       "summary": "How to display the colorful fireflies effect as I did in this Home page."
     }
   },
   {
-    "name": "angular/highlightjs.md",
+    "name": "public/blog/angular/highlightjs.md",
     "attributes": {
       "title": "Display a code block with HighlightJs",
       "date": "01 Mar 2024",
       "readingTime": "5 min read",
-      "tags": [
+      "keys": [
         "Angular",
-        "HightlightJs"
+        "Directive",
+        "gist",
+        "Highlightjs",
+        "lineNumber",
+        "Copy Button"
+      ],
+      "tags": [
+        "angular",
+        "highlightjs"
       ],
       "summary": " Ngx-highlightjs is hard to add the plugins <code>copy-button</code> and set the range of <code>line numbers</code>. Instead of using this package, I created my angular directive to highlight code with the plugins of highlightjs such as copy button and line number."
     }

@@ -1,43 +1,25 @@
-import { Component, ElementRef, viewChild, signal } from '@angular/core';
-
-interface Scroll {
-  behavior: string;
-}
-
-interface Element {
-  childNodes: Element[];
-  localName: string;
-  innerText: string;
-  scrollIntoView(scroll: Scroll): void;
-}
+import { Component, inject, signal } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [MarkdownModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })
 export class BlogComponent {
-  blogContent = viewChild<ElementRef>('blogContent');
-  nodes = signal<Element[]>([]);
 
-  getHeaders(root: Element) {
-    if (root) {
-      if (['h2', 'h3', 'h4'].includes(root.localName)) {
-        this.nodes.update(e => { e.push(root); return e; });
-      } else if (root.childNodes) {
-        const nodes: Element[] = root.childNodes;
-        nodes.forEach(element => this.getHeaders(element));
-      }
-    }
+  readonly category = signal('');
+  readonly id = signal('');
+
+  private route = inject(ActivatedRoute);
+
+  constructor() {
+    this.route.params.subscribe((params) => {
+      this.category.set(params['category']);
+      this.id.set(params['id']);
+    });
   }
 
-  ngAfterViewInit() {
-    const root = this.blogContent()?.nativeElement;
-    this.getHeaders(root);
-  }
-
-  scrollTo(e?: Element) {
-    e?.scrollIntoView({ behavior: 'smooth' });
-  }
 }

@@ -1,12 +1,1 @@
-<h1>
-    <ng-content select="blog-header"></ng-content>
-</h1>
-<div>
-    <h3>Table of Contents</h3>
-    @for (node of nodes(); track $index) {
-        <a (click)="scrollTo(node)" class="{{node.localName}}">{{node.innerText}}</a><br/>
-    }
-</div>
-<div #blogContent>
-    <ng-content select="blog-content"></ng-content>
-</div>
+<markdown clipboard src="blog/{{category()}}/{{id()}}.md" />

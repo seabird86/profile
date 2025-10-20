@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
 })
 export class BlogService {
 
-  private apiUrl = 'http://localhost:4200/api/blogs.json';
+  private apiUrl = `${environment.apiUrl}/api/blogs.json`;
 
   constructor(private http: HttpClient) { }
 

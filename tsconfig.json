@@ -27,7 +27,7 @@
     "paths": {
       "@app/*": [
         "./app/*"
-      ]
+      ],
     }
   },
   "angularCompilerOptions": {

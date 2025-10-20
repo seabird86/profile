@@ -25,7 +25,7 @@
         "Angular",
         "SCSS"
       ],
-      "summary": "Using CSS to display colorful firefly effect in a background.",
+      "summary": "Using CSS to create colorful fireflies flying in a background.",
       "image": "firefly.png"
     }
   },
@@ -43,7 +43,7 @@
         "lineNumber",
         "Copy Button"
       ],
-      "summary": "Creating an Angular directive to highlight code with copy button and line number.",
+      "summary": "Using Highlightjs in an Angular App to hightlight code blocks with functions such as copy and line number.",
       "image": "highlightjs.png"
     }
   }

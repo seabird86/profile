@@ -1,9 +1,9 @@
 ---
 title: "Display a code block with HighlightJs"
 date: "01 Mar 2024"
-readingTime: 5 min read
+readingTime: 10 min read
 tags: [Angular, Directive, gist, Highlightjs, lineNumber, Copy Button]
-summary: "Creating an Angular directive to highlight code with copy button and line number."
+summary: "Using Highlightjs in an Angular App to hightlight code blocks with functions such as copy and line number."
 image: highlightjs.png
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Display a Table of Contents"
 date: "01 Aug 2024"
-readingTime: 3 min read
+readingTime: 5 min read
 tags: [Angular, viewChild, Depth-first Search, scrollIntoView]
 summary: "Table of Contents lists all links of headings in a blog."
 image: content-table.png

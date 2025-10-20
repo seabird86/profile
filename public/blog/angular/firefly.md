@@ -3,7 +3,7 @@ title: "Display the colorful fireflies effect"
 date: "01 May 2024"
 readingTime: 3 min read
 tags: [Angular, SCSS]
-summary: "Using CSS to display colorful firefly effect in a background."
+summary: "Using CSS to create colorful fireflies flying in a background."
 image: firefly.png
 ---
 

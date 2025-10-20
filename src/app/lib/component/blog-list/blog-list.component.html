@@ -1,12 +1,9 @@
 <div id="list">
     @for (item of blogs(); track $index) {
-    <div class="item">
-        <div>
-            <img src="blog/img/{{item.attributes.image}}" />
-        </div>
+    <div class="item">        
         <div>
             <h2>
-                <a routerLink="/blog/angular/highlightjs">{{item.attributes.title}}</a>
+                <a routerLink="/blog/{{item.name}}">{{item.attributes.title}}</a>
             </h2>
             <span>
                 @for (key of item.attributes.tags; track $index) {
@@ -14,6 +11,10 @@
                 }
             </span>
             <p>{{item.attributes.summary}}</p>
+        </div>
+        <span class="spacer"></span>
+        <div>
+            <img src="blog/img/{{item.attributes.image}}" />
         </div>
 
     </div>

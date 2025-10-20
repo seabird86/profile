@@ -4,7 +4,7 @@
     "attributes": {
       "title": "Display a Table of Contents",
       "date": "01 Aug 2024",
-      "readingTime": "3 min read",
+      "readingTime": "5 min read",
       "tags": [
         "Angular",
         "viewChild",
@@ -34,7 +34,7 @@
     "attributes": {
       "title": "Display a code block with HighlightJs",
       "date": "01 Mar 2024",
-      "readingTime": "5 min read",
+      "readingTime": "10 min read",
       "tags": [
         "Angular",
         "Directive",

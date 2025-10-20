@@ -11,7 +11,7 @@ export interface BlogAttributes {
     summary: string;
     date: string;
     tags: string[];
-    keys: string[];
+    image: string;
 }
 
 
@@ -31,7 +31,7 @@ export class BlogUtils {
                     const content: string = fs.readFileSync(itemPath, 'utf-8');
                     const { attributes, body } = fm(content);
                     metadatas.push({
-                        name: itemPath.replace('public/md/', ''),
+                        name: itemPath.replace('public/blog/', '').replace('.md',''),
                         attributes: attributes as BlogAttributes
                     });
                 }

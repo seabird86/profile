@@ -1,46 +1,77 @@
-mat-card {
-    margin-top: 2vw;
-    min-height: 300px;
-    padding: 25px;
-    border-color: pink;
-    border-style: dashed;
+#list {
+    display: flex;
+    flex-direction: column;
 
-    @media (max-width: 768px) {
-        padding: 20px;
-    }
+    .item {
+        margin-top: 2vw;
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        background-color: var(--mat-sys-background);
+        border-style: dashed;
+        border-color: #e5e7eb;
+        border-radius: 10px;
 
-    @media (max-width: 425px) {
-        padding: 5px;
-        border-color: honeydew;
-    }
-
-    mat-card-header {
-        a {
-            color: purple;
-
-            &:hover {
-                color: brown;
+        div:first-child {
+            display: flex;
+            width: 300px;
+            margin: 0px;
+            img {
+                border-radius: 10px;
+                width: 300px;
+                height: 100%;
+                object-fit: fill;
             }
         }
 
-        mat-card-subtitle {
-            padding: 10px 0px;
-            font-family: 'Courier New', Courier, monospace;
-            color: darkolivegreen;
+        div:nth-child(2) {
+            display: block;
+            padding: 0px 30px;
+
+            h2 {
+                font-family: var(--mat-card-title-text-font, var(--mat-sys-title-large-font));
+                line-height: var(--mat-card-title-text-line-height, var(--mat-sys-title-large-line-height));
+                font-size: var(--mat-card-title-text-size, var(--mat-sys-title-large-size));
+                letter-spacing: var(--mat-card-title-text-tracking, var(--mat-sys-title-large-tracking));
+                font-weight: var(--mat-card-title-text-weight, var(--mat-sys-title-large-weight));
+
+                a {
+                    color: purple;
+
+                    &:hover {
+                        color: brown;
+                    }
+                }
+            }
+
+            span {
+
+                code {
+                    padding: 7px;
+                    background-color: var(--mat-sys-primary-container);
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    color: rgb(141, 143, 139);
+                    user-select: all;
+                }
+
+                margin-bottom: 20px;
+            }
+
+            p {
+                text-align: justify;
+                margin-top: 30px;
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 5px;
+                display: inline-block;
+                vertical-align: middle;
+            }
         }
 
-        img {
-            width: 30px;
-            height: 30px;
-            display: inline-block;
-        }
     }
-}
 
-mat-card-content {
-    color: darkslategray;
-    padding-top: 10px;
-    line-height: 1.6em;
-    font-family: "Raleway";
-    text-align: justify;
 }

@@ -2,9 +2,9 @@
 title: "Display a code block with HighlightJs"
 date: "01 Mar 2024"
 readingTime: 5 min read
-keys: [Angular, Directive, gist, Highlightjs, lineNumber, Copy Button]
-tags: [angular,highlightjs]
-summary: " Ngx-highlightjs is hard to add the plugins <code>copy-button</code> and set the range of <code>line numbers</code>. Instead of using this package, I created my angular directive to highlight code with the plugins of highlightjs such as copy button and line number."
+tags: [Angular, Directive, gist, Highlightjs, lineNumber, Copy Button]
+summary: "Creating an Angular directive to highlight code with copy button and line number."
+image: highlightjs.png
 ---
 
 ## 1. Purpose

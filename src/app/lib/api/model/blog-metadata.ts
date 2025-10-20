@@ -8,5 +8,5 @@ export interface BlogAttributes {
     summary: string;
     date: string;
     tags: string[];
-    keys: string[];
+    image: string;
 }

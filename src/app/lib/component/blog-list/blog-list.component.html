@@ -1,23 +1,22 @@
-<div>
+<div id="list">
     @for (item of blogs(); track $index) {
-
-    <mat-card appearance="outlined">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title><a routerLink="/blog/angular/highlightjs">{{item.attributes.title}}</a></mat-card-title>
-                <mat-card-subtitle>{{item.attributes.keys.join(", ")}}</mat-card-subtitle>
-            </mat-card-title-group>
-            <span class="spacer"></span>
-            <div>
-                @for (tag of item.attributes.tags; track $index) {
-                    <img src="home/{{tag}}.webp" title="{{tag}}" />
+    <div class="item">
+        <div>
+            <img src="blog/img/{{item.attributes.image}}" />
+        </div>
+        <div>
+            <h2>
+                <a routerLink="/blog/angular/highlightjs">{{item.attributes.title}}</a>
+            </h2>
+            <span>
+                @for (key of item.attributes.tags; track $index) {
+                    <code>{{key}}</code>
                 }
-            </div>
-        </mat-card-header>
-        <mat-card-content>
-            {{item.attributes.summary}}
-        </mat-card-content>
-    </mat-card>
+            </span>
+            <p>{{item.attributes.summary}}</p>
+        </div>
 
+    </div>
     }
+
 </div>

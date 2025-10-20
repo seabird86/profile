@@ -1,46 +1,41 @@
 [
   {
-    "name": "public/blog/angular/content-table.md",
+    "name": "angular/content-table",
     "attributes": {
       "title": "Display a Table of Contents",
       "date": "01 Aug 2024",
       "readingTime": "3 min read",
-      "keys": [
+      "tags": [
         "Angular",
         "viewChild",
         "Depth-first Search",
         "scrollIntoView"
       ],
-      "tags": [
-        "angular"
-      ],
-      "summary": "How to display a Table of Contents in a web page. This table will list all of heading tags and navigate readers to these heading's content position."
+      "summary": "Table of Contents lists all links of headings in a blog.",
+      "image": "content-table.png"
     }
   },
   {
-    "name": "public/blog/angular/firefly.md",
+    "name": "angular/firefly",
     "attributes": {
       "title": "Display the colorful fireflies effect",
       "date": "01 May 2024",
       "readingTime": "3 min read",
-      "keys": [
+      "tags": [
         "Angular",
         "SCSS"
       ],
-      "tags": [
-        "angular",
-        "scss"
-      ],
-      "summary": "How to display the colorful fireflies effect as I did in this Home page."
+      "summary": "Using CSS to display colorful firefly effect in a background.",
+      "image": "firefly.png"
     }
   },
   {
-    "name": "public/blog/angular/highlightjs.md",
+    "name": "angular/highlightjs",
     "attributes": {
       "title": "Display a code block with HighlightJs",
       "date": "01 Mar 2024",
       "readingTime": "5 min read",
-      "keys": [
+      "tags": [
         "Angular",
         "Directive",
         "gist",
@@ -48,11 +43,8 @@
         "lineNumber",
         "Copy Button"
       ],
-      "tags": [
-        "angular",
-        "highlightjs"
-      ],
-      "summary": " Ngx-highlightjs is hard to add the plugins <code>copy-button</code> and set the range of <code>line numbers</code>. Instead of using this package, I created my angular directive to highlight code with the plugins of highlightjs such as copy button and line number."
+      "summary": "Creating an Angular directive to highlight code with copy button and line number.",
+      "image": "highlightjs.png"
     }
   }
 ]

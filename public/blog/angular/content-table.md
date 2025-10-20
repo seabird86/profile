@@ -2,16 +2,16 @@
 title: "Display a Table of Contents"
 date: "01 Aug 2024"
 readingTime: 3 min read
-keys: [Angular, viewChild, Depth-first Search, scrollIntoView]
-tags: [angular]
-summary: "How to display a Table of Contents in a web page. This table will list all of heading tags and navigate readers to these heading's content position."
+tags: [Angular, viewChild, Depth-first Search, scrollIntoView]
+summary: "Table of Contents lists all links of headings in a blog."
+image: content-table.png
 ---
 
 ## 1. Purpose
 
 As an angular developer, I would like to show a <b>Table of Contents</b>. It will automatically find and show all heading tags in a HTML element as a table of contents and allow user to scroll to its content. We won't use the URI fragments to scroll. Instead of that, we will find all heading tags and scroll to this element.
 
-<img src="blog/angular/asset/content-table.png" width="200" height="100">
+<img src="blog/img/content-table.png" width="200" height="100">
 
 ## 2. How to do
 

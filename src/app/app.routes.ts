@@ -5,7 +5,7 @@ import { BlogComponent } from '@app/lib/component/blog/blog.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, title: 'Home' },
-    { path: 'blog/:category/:id', component: BlogComponent },
+    { path: 'blogs/:category/:id', component: BlogComponent },
     { path: 'about/info', component: InfoComponent, title: 'About me' },
     { path: '**', component: HomeComponent }
 ];

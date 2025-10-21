@@ -13,16 +13,7 @@ image: highlightjs.png
 - There is a package ngx-highlightjs but it's hard to add **copy button** as well as support the options **fromLine** & **toLine** . So, I don't use this package and implemented another way.
 - The result is:
 
-```typescript
-
-import { HLJSApi } from 'highlight.js';
-import { StringUtils } from '@app/utils/string.utils';
- 
-interface HLJSLineNumber {
-  lineNumbersBlock(el: HTMLElement, option: {
-    singleLine: boolean,
-    startFrom: number
-```
+<img src="blog/img/highlightjs.png" width="300" height="150">
 
 ## 2. How to do
 

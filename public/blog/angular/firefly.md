@@ -133,5 +133,5 @@ In this guidelines, you learn how to use `SCSS` to create an animations of a fir
 
 Thanks for the original auth `Takeshi Kano` who developed this effect, published and shared to everyone. This help me make the beautiful colorful fireflies.
 
- - <https://codepen.io/tonkotsuboy/pen/zJbKNN">
+ - <https://codepen.io/tonkotsuboy/pen/zJbKNN>
         

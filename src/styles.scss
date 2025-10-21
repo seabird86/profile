@@ -131,8 +131,12 @@ a {
 markdown {
     h1 {
         text-align: center;
-        font-family: "Raleway";
-        font-weight: bold;
+        line-height: 1.5em;
+        color: var(--mat-sys-primary);
+    }
+
+    center:nth-child(2) {
+        color: var(--mat-sys-secondary);
     }
 
     @mixin index-content {

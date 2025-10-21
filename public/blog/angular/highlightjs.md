@@ -158,5 +158,5 @@ Instead of the package <code>ngx-highlightjs</code>, you can use directly the pa
 
 - <https://highlightjs.org>
 - <https://github.com/wcoder/highlightjs-line-numbers.js>
-- <https://github.com/arronhunt/highlightjs-copy">
+- <https://github.com/arronhunt/highlightjs-copy>
 - <https://github.com/MurhafSousli/ngx-highlightjs>

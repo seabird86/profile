@@ -6,7 +6,7 @@ export interface BlogMetadata {
 export interface BlogAttributes {
     title: string;
     summary: string;
-    date: string;
+    date: Date;
     tags: string[];
     image: string;
 }

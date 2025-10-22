@@ -1,9 +1,45 @@
 [
   {
+    "name": "angular/ngx-markdown",
+    "attributes": {
+      "title": "Extract and display metadata of a markdown file",
+      "date": "2025-05-02T00:00:00.000Z",
+      "readingTime": "10 min read",
+      "tags": [
+        "Angular",
+        "Ngx-markdown",
+        "Marked",
+        "Front-matter",
+        "Markdown",
+        "Metadata"
+      ],
+      "summary": "Ngx-markdown doesn't support markdown metadata. Using hook to extract and display the metadata such as readingTime, title, date.",
+      "image": "ngx-markdown.png"
+    }
+  },
+  {
+    "name": "angular/highlightjs",
+    "attributes": {
+      "title": "Display a code block with HighlightJs",
+      "date": "2024-11-01T00:00:00.000Z",
+      "readingTime": "10 min read",
+      "tags": [
+        "Angular",
+        "Directive",
+        "gist",
+        "Highlightjs",
+        "lineNumber",
+        "Copy Button"
+      ],
+      "summary": "Using Highlightjs in an Angular App to hightlight code blocks with functions such as copy and line number.",
+      "image": "highlightjs.png"
+    }
+  },
+  {
     "name": "angular/content-table",
     "attributes": {
       "title": "Display a Table of Contents",
-      "date": "01 Aug 2024",
+      "date": "2024-08-01T00:00:00.000Z",
       "readingTime": "5 min read",
       "tags": [
         "Angular",
@@ -19,7 +55,7 @@
     "name": "angular/firefly",
     "attributes": {
       "title": "Display the colorful fireflies effect",
-      "date": "01 May 2024",
+      "date": "2024-05-01T00:00:00.000Z",
       "readingTime": "3 min read",
       "tags": [
         "Angular",
@@ -27,24 +63,6 @@
       ],
       "summary": "Using CSS to create colorful fireflies flying in a background.",
       "image": "firefly.png"
-    }
-  },
-  {
-    "name": "angular/highlightjs",
-    "attributes": {
-      "title": "Display a code block with HighlightJs",
-      "date": "01 Mar 2024",
-      "readingTime": "10 min read",
-      "tags": [
-        "Angular",
-        "Directive",
-        "gist",
-        "Highlightjs",
-        "lineNumber",
-        "Copy Button"
-      ],
-      "summary": "Using Highlightjs in an Angular App to hightlight code blocks with functions such as copy and line number.",
-      "image": "highlightjs.png"
     }
   }
 ]

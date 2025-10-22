@@ -9,7 +9,7 @@ export interface BlogMetadata {
 export interface BlogAttributes {
     title: string;
     summary: string;
-    date: string;
+    date: Date;
     tags: string[];
     image: string;
 }
@@ -56,6 +56,7 @@ export class BlogUtils {
 
     extract() {
         const metadatas: BlogMetadata[] = this.getMetadata('public/blog');
+        metadatas.sort((a, b) => b.attributes.date.getTime() - a.attributes.date.getTime());
         console.log("metadatas", metadatas);
         this.writeMetadata(metadatas);
     };

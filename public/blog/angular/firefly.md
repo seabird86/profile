@@ -1,15 +1,19 @@
 ---
-title: "Display the colorful fireflies effect"
-date: "01 May 2024"
+title: Display the colorful fireflies effect
+date: 2024-05-01
 readingTime: 3 min read
 tags: [Angular, SCSS]
-summary: "Using CSS to create colorful fireflies flying in a background."
+summary: Using CSS to create colorful fireflies flying in a background.
 image: firefly.png
 ---
 
 ## 1. Purpose
 
 As an angular developer, I would like to display the colorful fireflies effect by using only SCSS. You can see the result of this effect in [Home](/) page (You have to wait 15 seconds for firefly's appearance in the banner)
+
+- The result is:
+
+<img src="blog/img/firefly.png" width="300" height="150">
 
 ## 2. How to do
 

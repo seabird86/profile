@@ -2,7 +2,7 @@
 title: Display a Table of Contents
 date: 2024-08-01
 readingTime: 5 min read
-tags: [Angular, viewChild, Depth-first Search, scrollIntoView]
+tags: [Angular, Typescript]
 summary: Table of Contents lists all links of headings in a blog.
 image: content-table.png
 ---

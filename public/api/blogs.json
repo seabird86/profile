@@ -1,5 +1,21 @@
 [
   {
+    "name": "springboot/dynamic-cache",
+    "attributes": {
+      "title": "Cache access tokens in Spring Boot",
+      "date": "2025-08-24T00:00:00.000Z",
+      "readingTime": "5 min read",
+      "tags": [
+        "Java",
+        "Spring boot",
+        "Cache",
+        "Access token"
+      ],
+      "summary": "How to cache multiple access tokens in Spring Boot.",
+      "image": "token-cache.png"
+    }
+  },
+  {
     "name": "angular/ngx-markdown",
     "attributes": {
       "title": "Extract and display metadata of a markdown file",
@@ -7,11 +23,10 @@
       "readingTime": "10 min read",
       "tags": [
         "Angular",
+        "Typescript",
         "Ngx-markdown",
         "Marked",
-        "Front-matter",
-        "Markdown",
-        "Metadata"
+        "Front-matter"
       ],
       "summary": "Ngx-markdown doesn't support markdown metadata. Using hook to extract and display the metadata such as readingTime, title, date.",
       "image": "ngx-markdown.png"
@@ -25,14 +40,28 @@
       "readingTime": "10 min read",
       "tags": [
         "Angular",
-        "Directive",
-        "gist",
-        "Highlightjs",
-        "lineNumber",
-        "Copy Button"
+        "Typescript",
+        "Highlightjs"
       ],
       "summary": "Using Highlightjs in an Angular App to hightlight code blocks with functions such as copy and line number.",
       "image": "highlightjs.png"
+    }
+  },
+  {
+    "name": "springboot/onbase-api",
+    "attributes": {
+      "title": "Solution to consume OnBase concurrent session licenses with REST API",
+      "date": "2024-08-20T00:00:00.000Z",
+      "readingTime": "10 min read",
+      "tags": [
+        "Java",
+        "Spring boot",
+        "Concurrent session",
+        "OnBase",
+        "Rest"
+      ],
+      "summary": "How do a micro service consume a proper number of concurrent session licenses on OnBase system.",
+      "image": "onbase-auth.png"
     }
   },
   {
@@ -43,9 +72,7 @@
       "readingTime": "5 min read",
       "tags": [
         "Angular",
-        "viewChild",
-        "Depth-first Search",
-        "scrollIntoView"
+        "Typescript"
       ],
       "summary": "Table of Contents lists all links of headings in a blog.",
       "image": "content-table.png"
@@ -59,10 +86,30 @@
       "readingTime": "3 min read",
       "tags": [
         "Angular",
+        "Typescript",
         "SCSS"
       ],
       "summary": "Using CSS to create colorful fireflies flying in a background.",
       "image": "firefly.png"
+    }
+  },
+  {
+    "name": "angular/onbase-ocr",
+    "attributes": {
+      "title": "Using Tesseract OCR to redact PII in OnBase",
+      "date": "2023-12-01T00:00:00.000Z",
+      "readingTime": "10 min read",
+      "tags": [
+        "OnBase",
+        "OCR",
+        "Tesseract",
+        "C#",
+        "redact",
+        "image",
+        "PDF"
+      ],
+      "summary": "Using open source Tesseract OCR library to redact sensitive information in image or PDF files in OnBase system.",
+      "image": "onbase-ocr.png"
     }
   }
 ]

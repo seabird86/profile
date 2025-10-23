@@ -2,7 +2,7 @@
 title: Display the colorful fireflies effect
 date: 2024-05-01
 readingTime: 3 min read
-tags: [Angular, SCSS]
+tags: [Angular, Typescript, SCSS]
 summary: Using CSS to create colorful fireflies flying in a background.
 image: firefly.png
 ---

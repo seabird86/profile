@@ -2,7 +2,7 @@
 title: Display a code block with HighlightJs
 date: 2024-11-01
 readingTime: 10 min read
-tags: [Angular, Directive, gist, Highlightjs, lineNumber, Copy Button]
+tags: [Angular, Typescript, Highlightjs]
 summary: Using Highlightjs in an Angular App to hightlight code blocks with functions such as copy and line number.
 image: highlightjs.png
 ---

@@ -20,7 +20,7 @@ export class BlogListComponent {
   private blogService: BlogService = inject(BlogService);
 
   ngOnInit(): void {
-    this.blogService.getBlogs(new HttpParams().set(Params.PAGE, 1).set(Params.SIZE, 5)).subscribe({
+    this.blogService.getBlogs(new HttpParams().set(Params.PAGE, 1).set(Params.SIZE, 10)).subscribe({
       next: (next) => {
         this.blogs.update(val => next);
       },

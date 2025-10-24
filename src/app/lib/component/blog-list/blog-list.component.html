@@ -19,8 +19,7 @@
 
     </div>
     }
-
-    <mat-paginator (page)="handlePageEvent($event)" [length]="blogs().length" [pageSize]="blogs().size"
-        [pageIndex]="blogs().index" aria-label="Select page">
-    </mat-paginator>
 </div>
+<mat-paginator (page)="handlePageEvent($event)" [length]="blogs().length" [pageSize]="blogs().size"
+    [pageIndex]="blogs().index" aria-label="Select page">
+</mat-paginator>

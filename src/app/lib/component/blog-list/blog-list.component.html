@@ -1,13 +1,13 @@
 <div id="list">
-    @for (item of blogs(); track $index) {
-    <div class="item">        
+    @for (item of blogs().data; track $index) {
+    <div class="item">
         <div>
             <h2>
                 <a routerLink="/blogs/{{item.name}}">{{item.attributes.title}}</a>
             </h2>
             <span>
                 @for (key of item.attributes.tags; track $index) {
-                    <code>{{key}}</code>
+                <code>{{key}}</code>
                 }
             </span>
             <p>{{item.attributes.summary}}</p>
@@ -20,4 +20,7 @@
     </div>
     }
 
+    <mat-paginator (page)="handlePageEvent($event)" [length]="blogs().length" [pageSize]="blogs().size"
+        [pageIndex]="blogs().index" aria-label="Select page">
+    </mat-paginator>
 </div>

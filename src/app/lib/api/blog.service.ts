@@ -4,7 +4,9 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Params } from '@app/lib/constants/constants';
 import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
+import { Page } from '@app/lib/api/model/pagination';
 import { environment } from '../../../environments/environment';
+import { Builder } from '@app/lib/utils/builder.utils';
 
 
 @Injectable({
@@ -16,7 +18,7 @@ export class BlogService {
 
   constructor(private http: HttpClient) { }
 
-  getBlogs(params: HttpParams): Observable<BlogMetadata[]> {
+  getBlogs(params: HttpParams): Observable<Page<BlogMetadata>> {
     return this.http.get<BlogMetadata[]>(this.apiUrl, { params }).pipe(
       map((val: BlogMetadata[]) => {
         if (params.has('tag')) {
@@ -24,7 +26,12 @@ export class BlogService {
         }
         let page: number = parseInt(params.get(Params.PAGE) ?? '1');
         let size: number = parseInt(params.get(Params.SIZE) ?? '10');
-        return val.slice(page * size - size, page * size);
+        let length: number = val.length;
+        return Builder<Page<BlogMetadata>>()
+        .length(length)
+        .index(page - 1)
+        .size(size)
+        .data(val.slice(page * size - size, page * size)).build();
       }));
   }
 

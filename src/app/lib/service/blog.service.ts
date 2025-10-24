@@ -12,7 +12,7 @@ function parseHeader(attributes: any): string {
 };
 
 @Injectable()
-export class BlogMetadata implements MarkedExtension {
+export class BlogService implements MarkedExtension {
     hooks = {
         preprocess(markdown: string) {
             const { attributes, body }: FrontMatterResult<any> = fm(markdown);

@@ -151,6 +151,7 @@ markdown {
 
     li {
         margin-bottom: 0.5em;
+        text-align: justify;
     }
 
     p {
@@ -179,5 +180,24 @@ markdown {
 
     a.h3 {
         margin-left: 2vw;
+    }
+
+    blockquote {
+        background: var(--mat-sys-primary-container);
+        border-left: 4px solid #03a9f4;
+        border-radius: 4px;
+        color: var(--mat-sys-on-primary-container);
+        margin: 20px 0;
+        padding: 1px 20px;
+    }
+
+    code:not(pre code) {
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9em;
+        color: #333;
     }
 }

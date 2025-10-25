@@ -1,17 +1,16 @@
 #list {
+    margin-bottom: 20px;
     .item {
         margin-top: 2vw;
         display: flex;
         flex-direction: row;
         background-color: var(--mat-sys-background);
-        border-style: dashed;
-        border-color: #e5e7eb;
         border-radius: 10px;
+        box-shadow: var(--mat-button-protected-container-elevation-shadow, var(--mat-sys-level1));
 
         @media (max-width: 425px) {
             flex-direction: column;
             padding-top: 15px;
-            border-style: solid;
             margin-top: 20px;
         }
 
@@ -38,10 +37,10 @@
                 }
 
                 a {
-                    color: purple;
+                    color: var(--mat-sys-primary);
 
                     &:hover {
-                        color: brown;
+                        color: var(--mat-sys-tertiary);
                     }
                 }
             }
@@ -59,10 +58,10 @@
 
                 code {
                     padding: 0px 7px;
-                    background-color: var(--mat-sys-primary-container);
+                    background-color: var(--mat-sys-secondary-container);
                     border-radius: 5px;
                     margin-right: 5px;
-                    color: rgb(141, 143, 139);
+                    color: var(--mat-sys-on-secondary-container);
                     user-select: all;
                     font-size: x-small;
                     display: inline-block;
@@ -82,7 +81,7 @@
 
             p {
                 text-align: justify;
-
+                color: var(--mat-sys-on-background);
                 @media (max-width: 768px) {
                     font-size: small;
                     margin-top: 10px 0px;
@@ -124,5 +123,7 @@
         }
 
     }
-
+}
+mat-paginator{
+    background-color: white;
 }

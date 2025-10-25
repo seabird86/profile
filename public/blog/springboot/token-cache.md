@@ -9,22 +9,32 @@ image: token-cache.png
 
 ## 1. Purpose
 
-- In the fact, you have to cache access tokens to avoid from calling a lot of the authentication API. As a java developer, if it's an access token, I would like to cache it with its expiresIn.
+Caching access tokens is an important step to imporve performance of your applications. An authentication API usually responds the expiry time in the field `expires_in`.
+
+```json
+{
+  "access_token": "your_access_token_here",
+  "expires_in": 3600
+}
+
+```
+
+ As a java developer, I will use CacheManager in the spring boot to cache its value in a duration `expires_in`.
 
 <img src="blog/img/token-cache.png" width="300" height="150">
 
 ## 2. How to do
 
-- Because you need cache with lifetime of an access token, so you need to define a class that includes the token value and its expiresIn.
+First of all, you need to define a class that includes the token value and its expiresIn because we will map the authentication response to this object then cache both of the fields.
 
 ```java
 
-public record CacheValue(String data, long expiresIn) {
+public record CacheValue(String token, long expiresIn) {
 }
 
 ```
 
-- Using CacheManager, you can create multiple caches and set up the expire strategies for them.
+You need to configure to create a CacheManager bean where you define all caches as well as the following strategy of expiry time. `expires_in` is a time range from when access token was created to when it expires. So, it only focuses on the method `expireAfterCreate`.
 
 
 ```java
@@ -55,7 +65,7 @@ public CacheManager createCacheManager() {
 }
 ```
 
-- Finally, you can call your API to get the access token with `@Cachable` annotation. You have to return an instance of CacheValue.
+Finally, you can call your API to get the access token with `@Cachable` annotation. You have to return an instance of CacheValue.
 
 ```java
 
@@ -67,7 +77,7 @@ public CacheValue token() {
 }
 ```
 
-Note that, you need to buffer a small time to make sure that this cached token is still available when you pull it from the cache and pass it to a API server. It should be 1 or 2 minutes.
+ > You need to buffer a small time to make sure that the cached token will still be available in the a API server when you pull it from the cache. This buffer value should be 1 or 2 minutes.
 
 
 ## 3. Conclusion

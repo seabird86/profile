@@ -1,6 +1,6 @@
 [
   {
-    "name": "springboot/dynamic-cache",
+    "name": "springboot/token-cache",
     "attributes": {
       "title": "Cache access tokens in Spring Boot",
       "date": "2025-08-24T00:00:00.000Z",

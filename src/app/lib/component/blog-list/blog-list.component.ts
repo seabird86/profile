@@ -1,4 +1,4 @@
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, inject, input, signal, WritableSignal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { HttpParams } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
@@ -7,6 +7,7 @@ import { BlogService } from '@app/lib/api/blog.service';
 import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
 import { Params } from '@app/lib/constants/constants';
 import { Page } from '@app/lib/api/model/pagination';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-blog-list',
@@ -17,20 +18,21 @@ import { Page } from '@app/lib/api/model/pagination';
 })
 export class BlogListComponent {
 
-  blogs: WritableSignal<Page<BlogMetadata>> = signal({size: 3});
+  blogs: WritableSignal<Page<BlogMetadata>> = signal({ number: 1, size: environment.homePageSize });
 
   private blogService: BlogService = inject(BlogService);
+  showPaginator = input(true);
 
   ngOnInit(): void {
-    this.getBlogs(1, 3);
+    this.getBlogs(this.blogs().number);
   }
   handlePageEvent(e: PageEvent) {
-    this.getBlogs(e.pageIndex + 1, e.pageSize);
+    this.getBlogs(e.pageIndex + 1);
   }
 
-  getBlogs(page: number, size: number) {
-    this.blogService.getBlogs(new HttpParams().set(Params.PAGE, page)
-      .set(Params.SIZE, size)).subscribe({
+  getBlogs(pageNumber: number) {
+    this.blogService.getBlogs(new HttpParams().set(Params.PAGE, pageNumber)
+      .set(Params.SIZE, this.blogs().size)).subscribe({
         next: (next) => {
           this.blogs.update(val => next);
         },

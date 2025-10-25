@@ -28,10 +28,10 @@ export class BlogService {
         let size: number = parseInt(params.get(Params.SIZE) ?? '10');
         let length: number = val.length;
         return Builder<Page<BlogMetadata>>()
-        .length(length)
-        .index(page - 1)
+        .totalElements(length)
+        .number(page)
         .size(size)
-        .data(val.slice(page * size - size, page * size)).build();
+        .content(val.slice(page * size - size, page * size)).build();
       }));
   }
 

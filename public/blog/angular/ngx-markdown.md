@@ -11,18 +11,19 @@ image: ngx-markdown.png
 
 As an angular developer, I would like to display a markdown file as a blog page by using ngx-markdown <https://www.npmjs.com/package/ngx-markdown>. However, this library doesn't support metadata. So, we can use front-matter in order to extract as well as hook to display the metadata in a blog page.
 
-- The example of markdown metadata is:
+An example of markdown metadata is:
 
-<img src="blog/img/ngx-markdown-content.png" width="300" height="150">
+<img src="blog/img/ngx-markdown-content.png" width="300" height="200">
 
-- The result is:
+The result is:
 
-<img src="blog/img/ngx-markdown.png" width="300" height="150">
+<img src="blog/img/ngx-markdown.png" width="300" height="200">
 
 ## 2. How to do
 
- - You need to follow the page of ngx-markdown to implement it into an angular application.
- - I assume that you have a file `blog/angular/firefly.md` in the folder `public`. When you deploy, you refer to this file to display it as a blog page in your application. Ngx-markdown will parse the markdown file into html file to display it content with some features like `highlight code blog`, `copy button`.
+ You need to follow the page of ngx-markdown to implement it into an angular application.
+ 
+ I assume that you have a file `blog/angular/firefly.md` in the folder `public`. When you deploy, you refer to this file to display it as a blog page in your application. Ngx-markdown will parse the markdown file into html file to display it content with some features like `highlight code blog`, `copy button`.
 
 ```html
 
@@ -30,7 +31,7 @@ As an angular developer, I would like to display a markdown file as a blog page 
 
 ```
 
- - You need to create the below service `BlogMetadata` that implement the interface of `marked`. Ngx-markdown uses the library `marked` to convert a markdown file to html file. The method `hooks` allows to make a preprocess. In this method, you parse metadata as well as body from the content of this markdown file. You convert the metadata into html code and merge this section into the body of markdown file.
+ You need to create the below service `BlogMetadata` that implement the interface of `marked`. Ngx-markdown uses the library `marked` to convert a markdown file to html file. The method `hooks` allows to make a preprocess. In this method, you parse metadata as well as body from the content of this markdown file. You convert the metadata into html code and merge this section into the body of markdown file.
  
 
 
@@ -59,7 +60,8 @@ export class BlogMetadata implements MarkedExtension {
     }
 };
 ```
- - The final step, you inject this class into the parameter of the method `provideMarkdown` in the file `app.config.ts` when you define `ngx-markdown`
+
+The final step, you inject this class into the parameter of the method `provideMarkdown` in the file `app.config.ts` when you define `ngx-markdown`
 
 ```typescript
 

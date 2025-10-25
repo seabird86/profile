@@ -1,14 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-blog-detail',
   imports: [MarkdownModule],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+  templateUrl: './blog-detail.component.html',
+  styleUrl: './blog-detail.component.scss'
 })
-export class BlogComponent {
+export class BlogDetailComponent {
 
   readonly category = signal('');
   readonly id = signal('');

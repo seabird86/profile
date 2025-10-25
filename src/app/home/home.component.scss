@@ -137,6 +137,11 @@
 }
 
 .blogs {
+    h3 {
+        text-align: center;
+        color: var(--mat-sys-primary);
+    }
+
     mat-card-title-group {
         width: auto !important
     }
@@ -150,7 +155,12 @@
 
     @media (max-width: 1024px) {
         width: 95vw;
-    }    
+    }
+
+    button {
+        margin: 20px auto;
+        display: block;
+    }
 }
 
 .firefly-container {
@@ -227,7 +237,7 @@
 
             .firefly {
                 animation-delay: math.random(4000) + ms;
-                background-image: list.nth([radial-gradient(hsl(62, 55%, 90%),
+                background-image: list.nth([ radial-gradient(hsl(62, 55%, 90%),
                             hsl(270, 14%, 97%) 10%,
                             hsla(0, 0%, 0%, 0) 56%),
                         radial-gradient(hsl(30, 12%, 97%),

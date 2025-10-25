@@ -1,8 +1,8 @@
 <div class="banner">
     @for (item of [].constructor(50); track $index) {
-        <div class="firefly-container">    
-            <div class="firefly"></div>
-        </div>
+    <div class="firefly-container">
+        <div class="firefly"></div>
+    </div>
     }
     <span class="fire">Let read my stories</span>
     <div class="avatar">
@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="intro">
-    <h1 class="fire">Love and great experience on</h1>    
+    <h1 class="fire">Love and great experience on</h1>
     <div>
         <img src="home/java.webp" title="Java" />
         <img src="home/spring.webp" title="Spring" />
@@ -22,9 +22,15 @@
         <img src="home/cicd.webp" title="CICD" />
     </div>
 </div>
-
 <div class="blogs">
-    <app-blog-list></app-blog-list>
+    <h3><span class="material-icons">bookmarks</span> RECENT POSTS</h3>
+    <app-blog-list [showPaginator]="false"></app-blog-list>
+    <div>
+        <button matButton="elevated" routerLink="blogs">
+            <mat-icon>read_more</mat-icon>
+            READ MORE
+        </button>
+    </div>
 </div>
 
 <div class="greeting">

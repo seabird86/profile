@@ -1,5 +1,5 @@
 <div id="list">
-    @for (item of blogs().data; track $index) {
+    @for (item of blogs().content; track $index) {
     <div class="item">
         <div>
             <h2>
@@ -20,6 +20,10 @@
     </div>
     }
 </div>
-<mat-paginator (page)="handlePageEvent($event)" [length]="blogs().length" [pageSize]="blogs().size"
-    [pageIndex]="blogs().index" aria-label="Select page">
+
+
+@if (showPaginator()){
+<mat-paginator (page)="handlePageEvent($event)" [length]="blogs().totalElements" [pageSize]="blogs().size"
+    [pageIndex]="blogs().number - 1">
 </mat-paginator>
+}

@@ -1,1 +1,10 @@
-<app-blog-list></app-blog-list>
+<div>
+    <div>
+        @for (keyword of keywordOptions(); track $index) {
+        <mat-checkbox [checked]="keyword.selected" (change)="selectKeyword($event.checked, $index)">
+            {{keyword.value}}
+        </mat-checkbox>
+        }
+    </div>
+    <app-blog-list [keywords]="selectedKeywords()"></app-blog-list>
+</div>

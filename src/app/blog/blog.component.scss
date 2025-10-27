@@ -1,14 +1,38 @@
 :host {
-
-    app-blog-list {
+    >div {
+        display: flex;
         margin: 10px auto;
         width: 80vw;
         font-family: 'Raleway';
         line-height: 1.5em;
-        display: block;
+        flex-direction: row;
+
+        @media (max-width: 768px) {
+            width: 90vw;
+            flex-direction: column;
+        }
 
         @media (max-width: 425px) {
             width: 90vw;
         }
+
+        >div {
+            margin: 60px 30px 0px 0px;
+
+            @media (max-width: 768px) {
+                margin: 0px 0px 0px 0px;
+            }
+        }
+
+        mat-checkbox {
+            display: block;
+            width: 120px;
+
+            @media (max-width: 768px) {
+                display: inline-block;
+                width: auto;
+            }
+        }
+
     }
 }

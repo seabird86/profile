@@ -1,4 +1,4 @@
-import { Component, inject, input, signal, WritableSignal } from '@angular/core';
+import { Component, inject, input, signal, effect, untracked } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { HttpParams } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
@@ -18,27 +18,40 @@ import { environment } from '../../../../environments/environment';
 })
 export class BlogListComponent {
 
-  blogs: WritableSignal<Page<BlogMetadata>> = signal({ number: 1, size: environment.homePageSize });
-
-  private blogService: BlogService = inject(BlogService);
+  blogs = signal<Page<BlogMetadata>>({ number: 1, size: environment.homePageSize });
+  keywords = input<string[]>([]);
   showPaginator = input(true);
+  private blogService: BlogService = inject(BlogService);
+
+  constructor() {
+    effect(() => {
+      const keywords = this.keywords();
+      untracked(() => {
+        this.getBlogs(1, keywords);
+      });
+    });
+  }
 
   ngOnInit(): void {
-    this.getBlogs(this.blogs().number);
+    this.getBlogs(this.blogs().number, this.keywords());
   }
   handlePageEvent(e: PageEvent) {
-    this.getBlogs(e.pageIndex + 1);
+    this.getBlogs(e.pageIndex + 1, this.keywords());
   }
 
-  getBlogs(pageNumber: number) {
-    this.blogService.getBlogs(new HttpParams().set(Params.PAGE, pageNumber)
-      .set(Params.SIZE, this.blogs().size)).subscribe({
-        next: (next) => {
-          this.blogs.update(val => next);
-        },
-        error: (error) => {
-          console.error('Error fetching data:', error);
-        }
-      });
+  getBlogs(pageNumber: number, keywords: string[]) {
+    let params: HttpParams = new HttpParams().set(Params.PAGE, pageNumber)
+      .set(Params.SIZE, this.blogs().size);
+    keywords.forEach(e => {
+      params = params.append(Params.KEYWORDS, e.toLowerCase());
+    });
+    this.blogService.getBlogs(params).subscribe({
+      next: (next) => {
+        this.blogs.update(val => next);
+      },
+      error: (error) => {
+        console.error('Error fetching data:', error);
+      }
+    });
   }
 }

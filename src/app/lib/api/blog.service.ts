@@ -21,17 +21,17 @@ export class BlogService {
   getBlogs(params: HttpParams): Observable<Page<BlogMetadata>> {
     return this.http.get<BlogMetadata[]>(this.apiUrl, { params }).pipe(
       map((val: BlogMetadata[]) => {
-        if (params.has('tag')) {
-          val = val.filter(e => e.attributes.tags.find(el => el.toLowerCase() == params.get('tag')));
+        if (params.has(Params.KEYWORDS)) {
+          val = val.filter(e => e.attributes.tags.find(el => params.getAll(Params.KEYWORDS)?.includes(el.toLowerCase())));
         }
         let page: number = parseInt(params.get(Params.PAGE) ?? '1');
         let size: number = parseInt(params.get(Params.SIZE) ?? '10');
         let length: number = val.length;
         return Builder<Page<BlogMetadata>>()
-        .totalElements(length)
-        .number(page)
-        .size(size)
-        .content(val.slice(page * size - size, page * size)).build();
+          .totalElements(length)
+          .number(page)
+          .size(size)
+          .content(val.slice(page * size - size, page * size)).build();
       }));
   }
 

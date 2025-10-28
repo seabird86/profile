@@ -1,6 +1,6 @@
 @if (showPaginator()){
 <mat-paginator (page)="handlePageEvent($event)" [length]="blogs().totalElements" [pageSize]="blogs().size"
-    [pageIndex]="blogs().number - 1">
+    [pageIndex]="blogs().number - 1" [showFirstLastButtons]="true" [hidePageSize]="true">
 </mat-paginator>
 }
 <div id="list">
@@ -25,3 +25,8 @@
     </div>
     }
 </div>
+@if (showPaginator()){
+<mat-paginator (page)="handlePageEvent($event)" [length]="blogs().totalElements" [pageSize]="blogs().size"
+    [pageIndex]="blogs().number - 1" [showFirstLastButtons]="true" [hidePageSize]="true">
+</mat-paginator>
+}

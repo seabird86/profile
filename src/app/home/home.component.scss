@@ -137,13 +137,14 @@
 }
 
 .blogs {
-    margin: 5vw auto auto auto;
+    margin: 10vw auto auto auto;
     width: 70vw;
 
     h3 {
         text-align: center;
         color: var(--mat-sys-primary);
         margin-bottom: 30px;
+        vertical-align: bottom;
 
         @media (max-width: 768px) {
             margin-bottom: 20px;

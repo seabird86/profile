@@ -2,18 +2,20 @@
   <img src="home/avatar2.png" />
   <span>Kris</span>
   <span class="spacer"></span>
-  <button mat-button routerLink="/"><mat-icon fontIcon="home" />Home</button>
-  <button mat-button routerLink="about/info"><mat-icon fontIcon="info" />About</button>
-  <button mat-button routerLink="blogs">
-    <mat-icon fontIcon="wysiwyg"></mat-icon>
-    Blog
-  </button>
+  <button matButton [class]="isActive('/')" routerLink="/"><mat-icon fontIcon="home" />Home</button>
+  <button matButton [class]="isActive('/blogs',true)" routerLink="/blogs"><mat-icon
+      fontIcon="wysiwyg"></mat-icon>Blog</button>
+  <button matButton [class]="isActive('/about/info')" routerLink="/about/info"><mat-icon
+      fontIcon="info" />About</button>
 </mat-toolbar>
 <div>
   <router-outlet />
 </div>
 <footer>
   <p><a href="mailto:seabird86@gmail.com">seabird86&#64;gmail.com</a></p>
-  <p>&copy;2002 created by Kris Nguyen</p>
+  <p>&copy;2022 created by Kris Nguyen</p>
 </footer>
 <app-loading-spinner></app-loading-spinner>
+
+
+<!-- (routeEvent()?.url === '/') ? 'tonal' as MatButtonAppearance: 'text' as MatButtonAppearance -->

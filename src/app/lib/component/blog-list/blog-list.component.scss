@@ -6,7 +6,11 @@
         flex-direction: row;
         background-color: var(--mat-sys-background);
         border-radius: 10px;
-        box-shadow: var(--mat-button-protected-container-elevation-shadow, var(--mat-sys-level1));
+        box-shadow: var(--mat-sys-level1);
+
+        &:hover {
+            box-shadow: var(--mat-sys-level2);
+        }
 
         @media (max-width: 425px) {
             flex-direction: column;

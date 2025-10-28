@@ -17,11 +17,10 @@ import { filter } from 'rxjs/operators';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'profile';
   private router = inject(Router);
   routeEvent = toSignal(this.router.events.pipe(filter((event: Event) => event instanceof NavigationEnd)));
 
-  isActive(url: string, prefix: boolean = false) {
+  isActive(url: string, prefix: boolean = false): string {
     return (prefix && this.routeEvent()?.urlAfterRedirects.startsWith(url)) || url === this.routeEvent()?.urlAfterRedirects ? 'mat-tonal-button' : 'mat-button';
   }
 }

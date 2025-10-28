@@ -1,0 +1,4 @@
+@for (item of theme().backgrounds; track item) {
+<div class="color" style="background-color: var({{item}}); color: var({{getOnColor(item)}})"> {{item}} <br/> {{getOnColor(item)}}</div>
+
+}

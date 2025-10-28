@@ -5,16 +5,19 @@
 
     >div {
         margin-top: 64px;
+
         @media (max-width: 599px) {
             margin-top: 56px;
         }
-        
+
     }
+
     mat-toolbar {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        z-index: 2;
 
         .spacer {
             flex: auto;
@@ -38,7 +41,7 @@
     }
 
 
-    
+
 }
 
 footer {

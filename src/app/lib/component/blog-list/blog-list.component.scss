@@ -22,12 +22,8 @@
             display: block;
             padding: 0px 2vw;
 
-            h2 {
-                font-family: var(--mat-card-title-text-font, var(--mat-sys-title-large-font));
-                line-height: var(--mat-card-title-text-line-height, var(--mat-sys-title-large-line-height));
-                font-size: larger;
-                letter-spacing: var(--mat-card-title-text-tracking, var(--mat-sys-title-large-tracking));
-                font-weight: var(--mat-card-title-text-weight, var(--mat-sys-title-large-weight));
+            h3 {
+                font-weight: var(--mat-sys-title-large-weight);
 
                 @media (max-width: 768px) {
                     font-size: small;

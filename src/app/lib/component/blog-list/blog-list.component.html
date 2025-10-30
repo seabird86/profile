@@ -7,9 +7,10 @@
     @for (item of blogs().content; track $index) {
     <div class="item">
         <div>
-            <h2>
+            <i>{{ item.attributes.date | date: "dd MMM yyyy"}} - {{item.attributes.readingTime}}</i>
+            <h3>
                 <a routerLink="/blogs/{{item.name}}">{{item.attributes.title}}</a>
-            </h2>
+            </h3>
             <span>
                 @for (key of item.attributes.tags; track $index) {
                 <code>{{key}}</code>

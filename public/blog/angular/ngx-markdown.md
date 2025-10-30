@@ -3,13 +3,13 @@ title: Extract and display metadata of a markdown file
 date: 2025-05-02
 readingTime: 10 min read
 tags: [Angular, Typescript, Ngx-markdown, Marked, Front-matter]
-summary: Ngx-markdown doesn't support markdown metadata. Using hook to extract and display the metadata such as readingTime, title, date.
+summary: Play markdown metadata with Ngx-markdown
 image: ngx-markdown.png
 ---
 
 ## 1. Purpose
 
-As an angular developer, I would like to display a markdown file as a blog page by using ngx-markdown <https://www.npmjs.com/package/ngx-markdown>. However, this library doesn't support metadata. So, we can use front-matter in order to extract as well as hook to display the metadata in a blog page.
+As an angular developer, I would like to display a markdown file as a blog page by using ngx-markdown <https://www.npmjs.com/package/ngx-markdown>. However, this library doesn't support metadata directly. So, we can use front-matter in order to extract as well as hook to display the metadata in a blog page.
 
 An example of markdown metadata is:
 

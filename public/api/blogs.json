@@ -28,7 +28,7 @@
         "Marked",
         "Front-matter"
       ],
-      "summary": "Ngx-markdown doesn't support markdown metadata. Using hook to extract and display the metadata such as readingTime, title, date.",
+      "summary": "Play markdown metadata with Ngx-markdown",
       "image": "ngx-markdown.png"
     }
   },

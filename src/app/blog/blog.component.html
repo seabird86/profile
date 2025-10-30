@@ -1,5 +1,6 @@
 <div>
     <div>
+        <p>FILTER</p>
         @for (keyword of keywordOptions(); track $index) {
         <mat-checkbox [checked]="keyword.selected" (change)="selectKeyword($event.checked, $index)">
             {{keyword.value}}

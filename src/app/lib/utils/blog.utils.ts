@@ -12,6 +12,7 @@ export interface BlogAttributes {
     date: Date;
     tags: string[];
     image: string;
+    readingTime: string;
 }
 
 

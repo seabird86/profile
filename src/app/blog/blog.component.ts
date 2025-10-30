@@ -3,6 +3,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { BlogListComponent } from '@app/lib/component/blog-list/blog-list.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { Builder } from '@app/lib/utils/builder.utils';
+import { MatCard } from "@angular/material/card";
 
 export interface keywordOption {
   value: string;
@@ -11,7 +12,7 @@ export interface keywordOption {
 
 @Component({
   selector: 'app-blog',
-  imports: [MarkdownModule, BlogListComponent, MatCheckboxModule],
+  imports: [MarkdownModule, BlogListComponent, MatCheckboxModule, MatCard],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })

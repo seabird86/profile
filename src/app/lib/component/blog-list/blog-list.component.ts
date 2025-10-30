@@ -1,5 +1,6 @@
 import { Component, inject, input, signal, effect, untracked } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { DatePipe } from '@angular/common';
 import { HttpParams } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { PageEvent, MatPaginatorModule } from '@angular/material/paginator';
@@ -11,7 +12,7 @@ import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-blog-list',
-  imports: [MatCardModule, RouterLink, MatPaginatorModule],
+  imports: [MatCardModule, RouterLink, MatPaginatorModule, DatePipe],
   templateUrl: './blog-list.component.html',
   styleUrl: './blog-list.component.scss'
 

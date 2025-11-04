@@ -5,25 +5,28 @@
 }
 <div id="list">
     @for (item of blogs().content; track $index) {
-    <div class="item">
-        <div>
-            <i>{{ item.attributes.date | date: "dd MMM yyyy"}} - {{item.attributes.readingTime}}</i>
-            <h3>
-                <a routerLink="/blogs/{{item.name}}">{{item.attributes.title}}</a>
-            </h3>
-            <span>
-                @for (key of item.attributes.tags; track $index) {
-                <code>{{key}}</code>
-                }
-            </span>
-            <p>{{item.attributes.summary}}</p>
-        </div>
+    <mat-card appearance="outlined">
+        <mat-card-subtitle>
+            <i class="material-icons">calendar_today</i> {{ item.attributes.date | date: "dd MMM yyyy"}} &nbsp; |
+            &nbsp; <i class="material-icons">import_contacts</i> {{item.attributes.readingTime}}
+        </mat-card-subtitle>
+        <img src="blog/img/{{item.attributes.image}}" />
+        <mat-card-content>
+            <h3><a routerLink="/blogs/{{item.name}}">{{item.attributes.title}}</a></h3>
+            <p>
+                {{item.attributes.summary}}
+            </p>
+        </mat-card-content>
         <span class="spacer"></span>
-        <div>
-            <img src="blog/img/{{item.attributes.image}}" />
-        </div>
+        <mat-card-footer>
+            <mat-chip-set aria-label="Chihuahua traits">
+                @for (key of item.attributes.tags; track $index) {
+                <mat-chip>{{key}}</mat-chip>
+                }
+            </mat-chip-set>
 
-    </div>
+        </mat-card-footer>
+    </mat-card>
     }
 </div>
 @if (showPaginator()){

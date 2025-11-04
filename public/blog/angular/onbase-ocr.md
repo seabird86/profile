@@ -2,7 +2,7 @@
 title: Using Tesseract OCR to redact PII in OnBase
 date: 2023-12-01
 readingTime: 10 min read
-tags: [OnBase, OCR, Tesseract, C#, redact, image, PDF]
+tags: [OnBase, OCR, Tesseract, Image]
 summary: Using open source Tesseract OCR library to redact sensitive information in image or PDF files in OnBase system.
 image: onbase-ocr.png
 ---

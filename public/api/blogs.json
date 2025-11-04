@@ -18,17 +18,15 @@
   {
     "name": "angular/ngx-markdown",
     "attributes": {
-      "title": "Extract and display metadata of a markdown file",
+      "title": "Ngx-markdown with metadata",
       "date": "2025-05-02T00:00:00.000Z",
       "readingTime": "10 min read",
       "tags": [
         "Angular",
         "Typescript",
-        "Ngx-markdown",
-        "Marked",
-        "Front-matter"
+        "Ngx-markdown"
       ],
-      "summary": "Play markdown metadata with Ngx-markdown",
+      "summary": "Customize Ngx-markdown to display metadata of a markdown file",
       "image": "ngx-markdown.png"
     }
   },
@@ -50,17 +48,16 @@
   {
     "name": "springboot/onbase-api",
     "attributes": {
-      "title": "Solution to consume OnBase concurrent session licenses with REST API",
+      "title": "Microservice with OnBase concurrent session licenses",
       "date": "2024-08-20T00:00:00.000Z",
       "readingTime": "10 min read",
       "tags": [
-        "Java",
-        "Spring boot",
-        "Concurrent session",
         "OnBase",
-        "Rest"
+        "Concurrent license",
+        "Authentiation",
+        "Solution"
       ],
-      "summary": "How do a micro service consume a proper number of concurrent session licenses on OnBase system.",
+      "summary": "OnBase concurrent session licenses has limit. How to consume enough its license in a microservice.",
       "image": "onbase-auth.png"
     }
   },
@@ -72,7 +69,8 @@
       "readingTime": "5 min read",
       "tags": [
         "Angular",
-        "Typescript"
+        "Typescript",
+        "viewChild"
       ],
       "summary": "Table of Contents lists all links of headings in a blog.",
       "image": "content-table.png"
@@ -103,10 +101,7 @@
         "OnBase",
         "OCR",
         "Tesseract",
-        "C#",
-        "redact",
-        "image",
-        "PDF"
+        "Image"
       ],
       "summary": "Using open source Tesseract OCR library to redact sensitive information in image or PDF files in OnBase system.",
       "image": "onbase-ocr.png"

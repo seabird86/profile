@@ -9,10 +9,11 @@ import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
 import { Params } from '@app/lib/constants/constants';
 import { Page } from '@app/lib/api/model/pagination';
 import { environment } from '../../../../environments/environment';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-blog-list',
-  imports: [MatCardModule, RouterLink, MatPaginatorModule, DatePipe],
+  imports: [MatCardModule, RouterLink, MatPaginatorModule, DatePipe, MatChipsModule],
   templateUrl: './blog-list.component.html',
   styleUrl: './blog-list.component.scss'
 

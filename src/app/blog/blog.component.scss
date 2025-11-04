@@ -2,16 +2,25 @@
     >div {
         display: flex;
         margin: 10px auto;
-        width: 80vw;       
         flex-direction: row;
+        width: 1320px;
 
-        @media (max-width: 768px) {
-            width: 95vw;
-            flex-direction: column;
+        @media (max-width: 1320px) {
+            width: 930px;
         }
 
-        @media (max-width: 425px) {
-            width: 95vw;
+        @media (max-width: 930px) {
+            flex-direction: column;
+            width: 780px;
+        }
+
+        @media (max-width: 780px) {            
+            width: 390px;
+        }
+
+        @media (max-width: 390px) {
+            width: 390px;
+            
         }
 
         >div {
@@ -19,20 +28,25 @@
             line-height: 1.5em;
             font-family: "Roboto";
             font-weight: bold;
-            @media (max-width: 768px) {
+
+            @media (max-width: 930px) {
                 margin: 0px 0px 0px 0px;
             }
-        }
 
-        mat-checkbox {
-            display: block;
-            width: 120px;
+            mat-checkbox {
+                display: block;
+                width: 120px;
 
-            @media (max-width: 768px) {
-                display: inline-block;
-                width: auto;
+                @media (max-width: 930px) {
+                    display: inline-block;
+                    width: auto;
+                }
             }
         }
-
     }
+
+    // app-blog-list{
+    //     width: 100%;
+    // }
+
 }

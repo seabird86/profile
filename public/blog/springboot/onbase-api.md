@@ -1,9 +1,9 @@
 ---
-title: Solution to consume OnBase concurrent session licenses with REST API
+title: Microservice with OnBase concurrent session licenses
 date: 2024-08-20
 readingTime: 10 min read
-tags: [Java, Spring boot, Concurrent session, OnBase, Rest]
-summary: How do a micro service consume a proper number of concurrent session licenses on OnBase system.
+tags: [OnBase, Concurrent license, Authentiation, Solution]
+summary: OnBase concurrent session licenses has limit. How to consume enough its license in a microservice.
 image: onbase-auth.png
 ---
 
@@ -15,7 +15,7 @@ image: onbase-auth.png
 
 - Here is a diagram of Authentication & Authorisation in OnBase system.
 
-<img src="blog/img/onbase-auth.png" width="400" height="300">
+<img src="blog/img/onbase-auth-max.png" width="400" height="300">
 
 ## 2. How to do
 

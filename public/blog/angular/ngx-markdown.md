@@ -1,9 +1,9 @@
 ---
-title: Extract and display metadata of a markdown file
+title: Ngx-markdown with metadata
 date: 2025-05-02
 readingTime: 10 min read
-tags: [Angular, Typescript, Ngx-markdown, Marked, Front-matter]
-summary: Play markdown metadata with Ngx-markdown
+tags: [Angular, Typescript, Ngx-markdown]
+summary: Customize Ngx-markdown to display metadata of a markdown file
 image: ngx-markdown.png
 ---
 

@@ -1,5 +1,5 @@
 export const environment = {
     apiUrl: 'http://localhost:4200',
-    homePageSize: 3,
-    pageSize: 3
+    homePageSize: 6,
+    pageSize: 6
 };

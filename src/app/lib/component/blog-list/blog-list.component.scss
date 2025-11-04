@@ -21,12 +21,17 @@
     }
 
     @media (max-width: 390px) {
-        width: 390px;
+        width: 320px;
     }
 
     mat-card {
         width: 350px;
         margin: 20px;
+
+        @media (max-width: 390px) {
+            width: 300px;
+            margin: 10px;
+        }
 
         mat-card-subtitle {
             width: 100%;
@@ -62,13 +67,19 @@
                 text-align: center;
             }
         }
+
         .spacer {
             flex: auto;
         }
 
         mat-card-footer {
             padding: 16px 16px 16px 16px;
-            min-height: 60px;
+            height: 60px;
+
+            @media (max-width: 780px) {
+                min-height: 30px;
+                height: unset;
+            }
             @include mat.chips-overrides((label-text-color: var(--mat-sys-on-primary),
                     outline-width: 0px,
                     label-text-size: 0.7rem,

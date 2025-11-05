@@ -80,6 +80,7 @@
                 min-height: 30px;
                 height: unset;
             }
+
             @include mat.chips-overrides((label-text-color: var(--mat-sys-on-primary),
                     outline-width: 0px,
                     label-text-size: 0.7rem,

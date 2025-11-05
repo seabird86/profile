@@ -26,7 +26,7 @@
         span {
             font-family: "Protest Revolution", sans-serif;
             font-weight: bold;
-            color: purple;
+            color: var(--mat-sys-on-primary);
             margin-left: 8px;
         }
 
@@ -48,9 +48,9 @@ footer {
     text-align: center;
     font-weight: 100;
     font-size: 15px;
-    background-color: rgb(40, 42, 53);
     padding: 10px 10px;
-    color: white;
+    background-color: var(--mat-sys-inverse-surface);
+    color: var(--mat-sys-inverse-on-surface);
 
     a {
         text-decoration: none;

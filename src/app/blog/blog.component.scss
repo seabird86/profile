@@ -1,5 +1,6 @@
 :host {
     >div {
+        background-color: white;
         display: flex;
         margin: 10px auto;
         flex-direction: row;
@@ -19,7 +20,7 @@
         }
 
         @media (max-width: 390px) {
-            width: 390px;
+            width: 320px;
             
         }
 
@@ -31,6 +32,9 @@
 
             @media (max-width: 930px) {
                 margin: 0px 0px 0px 0px;
+            }
+            p {
+                margin-left: 12px;
             }
 
             mat-checkbox {
@@ -44,9 +48,4 @@
             }
         }
     }
-
-    // app-blog-list{
-    //     width: 100%;
-    // }
-
 }

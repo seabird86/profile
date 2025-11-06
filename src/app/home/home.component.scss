@@ -22,7 +22,7 @@
             font-family: "Lovers Quarrel", cursive;
             font-size: 5vw;
             display: inline-block;
-            color: azure;
+            color: purple;
         }
 
         .avatar {
@@ -68,8 +68,9 @@
         h1 {
             font-family: "Lovers Quarrel", cursive;
             font-size: 5em;
-            color: purple;
+            color: azure;
             text-align: center;
+            font-weight: 300;
         }
 
         div {
@@ -106,9 +107,6 @@
 
         div {
             width: 50%;
-            // background-color: var(--mat-sys-inverse-surface);    
-            // color: var(--mat-sys-inverse-on-surface);
-
             background-color: var(--mat-sys-secondary-container);
             color: var(--mat-sys-on-secondary-container);
             min-height: 290px;

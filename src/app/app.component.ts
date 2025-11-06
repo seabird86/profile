@@ -1,7 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -21,26 +21,31 @@ export class AppComponent {
   private router = inject(Router);
   routeEvent = toSignal(this.router.events.pipe(filter((event: Event) => event instanceof NavigationEnd)));
   dialog = inject(MatDialog);
-  dialogRef: MatDialogRef<MenuComponent> | undefined;
   showMenuDialog = signal<boolean>(false);
+  isScrolled = signal<boolean>(false);
 
   isActive(url: string, prefix: boolean = false): string {
     return (prefix && this.routeEvent()?.urlAfterRedirects.startsWith(url)) || url === this.routeEvent()?.urlAfterRedirects ? 'mat-tonal-button' : 'mat-button';
   }
   openDialog(): void {
-    if (!this.showMenuDialog()) {
-      this.dialogRef = this.dialog.open(MenuComponent, {
+    if (!this.showMenuDialog()) {      
+      this.dialog.open(MenuComponent, {
         position: { top: '64px' },
         autoFocus: false,
         width: '100%',
         maxWidth: '100%',
         panelClass: 'menu-dialog',
         data: { currentUrl: this.routeEvent()?.urlAfterRedirects },
-      });
-      this.showMenuDialog.set(true);
-      this.dialogRef.afterClosed().subscribe(result => {
+      }).afterClosed().subscribe(result => {
         this.showMenuDialog.set(false);
       });
+      this.showMenuDialog.set(true);
     }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const scrollThreshold = 100;
+      this.isScrolled.set((window.pageYOffset > scrollThreshold));
   }
 }

@@ -211,6 +211,10 @@ html {
     --mat-toolbar-container-text-color: var(--mat-sys-on-primary)
 }
 
+mat-toolbar.scrolled {
+    opacity: 0.7 !important;
+}
+
 .menu-dialog {
     @media (max-width: 599px) {
         margin-top: 56px !important;

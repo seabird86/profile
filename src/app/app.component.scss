@@ -9,7 +9,6 @@
         @media (max-width: 599px) {
             margin-top: 56px;
         }
-
     }
 
     mat-toolbar {
@@ -37,6 +36,23 @@
 
         @media (max-width: 425px) {
             padding: 0px;
+        }
+
+        button {
+            @media (max-width: 600px) {
+                display: none;
+            }
+
+        }
+
+        a {
+
+            display: none;
+
+            @media (max-width: 600px) {
+                display: inline-flex;
+            }
+
         }
     }
 
@@ -71,4 +87,38 @@ app-loading-spinner {
     position: fixed;
     top: 0;
     left: 50%;
+}
+
+.mobile-menu {
+
+    .line {
+        position: relative;
+        background-color: #fff;
+        border-radius: 3px;
+        width: 30px;
+        height: 4px;
+        top: 0px;
+        display: block;
+        transition: 0.5s ease-in-out;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &.open {
+        .line:first-child {
+            transform: rotate(45deg);
+            top: 12px;
+        }
+
+        .line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .line:last-child {
+            transform: rotate(-45deg);
+            top: -12px;
+        }
+    }
 }

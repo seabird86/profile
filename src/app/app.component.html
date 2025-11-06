@@ -7,7 +7,15 @@
       fontIcon="wysiwyg"></mat-icon>Blog</button>
   <button matButton [class]="isActive('/about/info')" routerLink="/about/info"><mat-icon
       fontIcon="info" />About</button>
+  <a matButton (click)="openDialog()">
+    <div class="mobile-menu {{showMenuDialog()?'open': ''}}">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </a>
 </mat-toolbar>
+
 <div>
   <router-outlet />
 </div>
@@ -16,6 +24,3 @@
   <p>&copy;2022 created by Kris Nguyen</p>
 </footer>
 <app-loading-spinner></app-loading-spinner>
-
-
-<!-- (routeEvent()?.url === '/') ? 'tonal' as MatButtonAppearance: 'text' as MatButtonAppearance -->

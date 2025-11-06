@@ -96,6 +96,7 @@ a {
     &.hover {
         opacity: 1;
     }
+
     .markdown-clipboard-button {
         background-color: rgba(0, 0, 0, 0);
         border: 1px solid;
@@ -203,8 +204,19 @@ markdown {
         color: #333;
     }
 }
-// Theme
-html {--mat-toolbar-container-background-color: var(--mat-sys-primary);
-    --mat-toolbar-container-text-color: var(--mat-sys-on-primary)
 
+// Theme
+html {
+    --mat-toolbar-container-background-color: var(--mat-sys-primary);
+    --mat-toolbar-container-text-color: var(--mat-sys-on-primary)
+}
+
+.menu-dialog {
+    @media (max-width: 599px) {
+        margin-top: 56px !important;
+    }
+
+    .mat-mdc-dialog-surface {
+        border-radius: 0px !important;
+    }
 }

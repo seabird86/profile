@@ -29,6 +29,9 @@
     mat-card {
         width: 350px;
         margin: 20px;
+        box-shadow: var(--mat-cus-shadow-bottom);
+        -webkit-box-shadow: var(--mat-cus-shadow-bottom);
+        -moz-box-shadow: var(--mat-cus-shadow-bottom);
 
         @media (max-width: 390px) {
             width: 300px;
@@ -101,6 +104,3 @@
 mat-paginator {
     background-color: var(--mat-sys-surface);
 }
-
-
-

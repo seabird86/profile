@@ -5,7 +5,7 @@
 }
 <div id="list">
     @for (item of blogs().content; track $index) {
-    <mat-card appearance="outlined" class = "animated-border1">
+    <mat-card appearance="outlined">
         <mat-card-subtitle>
             <i class="material-icons">calendar_today</i> {{ item.attributes.date | date: "dd MMM yyyy"}} &nbsp; |
             &nbsp; <i class="material-icons">import_contacts</i> {{item.attributes.readingTime}}

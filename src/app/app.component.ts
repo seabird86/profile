@@ -24,13 +24,13 @@ export class AppComponent {
   showMenuDialog = signal<boolean>(false);
   isScrolled = signal<boolean>(false);
   private document = inject(DOCUMENT);
-  themes = signal<string[]>(['blue', 'dark-blue', 'purple', 'dark-purple']);
+  themes = signal<string[]>(['theme-blue', 'theme-purple', 'theme-green', 'theme-red', 'theme-dark-blue']);
 
   isActive(url: string, prefix: boolean = false): string {
     return (prefix && this.routeEvent()?.urlAfterRedirects.startsWith(url)) || url === this.routeEvent()?.urlAfterRedirects ? 'mat-tonal-button' : 'mat-button';
   }
   openDialog(): void {
-    if (!this.showMenuDialog()) {      
+    if (!this.showMenuDialog()) {
       this.dialog.open(MenuComponent, {
         position: { top: '64px' },
         autoFocus: false,
@@ -48,7 +48,7 @@ export class AppComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     const scrollThreshold = 100;
-      this.isScrolled.set((window.pageYOffset > scrollThreshold));
+    this.isScrolled.set((window.pageYOffset > scrollThreshold));
   }
 
   changeTheme(theme: string) {

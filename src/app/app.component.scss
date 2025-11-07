@@ -2,7 +2,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--mat-sys-surface);
+    background-color: var(--mat-sys-background);
 
     >div {
         margin-top: 64px;
@@ -43,6 +43,10 @@
             @media (max-width: 600px) {
                 display: none;
             }
+        }
+
+        button.mat-tonal-button {
+            color: var(--mat-sys-primary);
         }
 
         a {
@@ -125,9 +129,10 @@ app-loading-spinner {
 }
 
 .theme-menu {
-    mat-icon{
+    mat-icon {
         color: var(--mat-sys-primary);
     }
+
     button {
         background-color: var(--mat-sys-primary-container);
         color: var(--mat-sys-on-primary-container);

@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--mat-sys-surface);
 
     >div {
         margin-top: 64px;
@@ -38,11 +39,10 @@
             padding: 0px;
         }
 
-        button {
+        button:not(.theme-button) {
             @media (max-width: 600px) {
                 display: none;
             }
-
         }
 
         a {
@@ -71,11 +71,12 @@ footer {
     a {
         text-decoration: none;
         font-family: "Roboto", sans-serif;
-        color: orange;
+        color: var(--mat-sys-inverse-on-surface);
+        // color: var(-mat-sys-on-secondary);
 
-        &:hover {
-            color: yellow;
-        }
+        // &:hover {
+        //     color: var(-mat-sys-on-tertiary);
+        // }
     }
 
     p {
@@ -120,5 +121,15 @@ app-loading-spinner {
             transform: rotate(-45deg);
             top: -12px;
         }
+    }
+}
+
+.theme-menu {
+    mat-icon{
+        color: var(--mat-sys-primary);
+    }
+    button {
+        background-color: var(--mat-sys-primary-container);
+        color: var(--mat-sys-on-primary-container);
     }
 }

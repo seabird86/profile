@@ -5,8 +5,25 @@
   <button matButton [class]="isActive('/')" routerLink="/"><mat-icon fontIcon="home" />Home</button>
   <button matButton [class]="isActive('/blogs',true)" routerLink="/blogs"><mat-icon
       fontIcon="wysiwyg"></mat-icon>Blog</button>
+  <button class="theme-button" matButton [matMenuTriggerFor]="menu" aria-label="Themes">
+    <mat-icon>format_color_fill</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div class="theme-menu">
+    @for (theme of themes(); track $index) {
+      
+    <button mat-menu-item (click)="changeTheme(theme)" class="{{theme}}">
+      <mat-icon>format_color_fill</mat-icon>
+      <span>{{theme}}</span>
+    </button>
+    }
+    </div>
+  </mat-menu>
   <button matButton [class]="isActive('/about/info')" routerLink="/about/info"><mat-icon
       fontIcon="info" />About</button>
+
+
+
   <a matButton (click)="openDialog()">
     <div class="mobile-menu {{showMenuDialog()?'open': ''}}">
       <span class="line"></span>

@@ -1,6 +1,6 @@
 :host {
     >div {
-        background-color: white;
+        // background-color: white;
         display: flex;
         margin: 10px auto;
         flex-direction: row;
@@ -35,6 +35,7 @@
             }
             p {
                 margin-left: 12px;
+                color: var(--mat-sys-on-surface);
             }
 
             mat-checkbox {

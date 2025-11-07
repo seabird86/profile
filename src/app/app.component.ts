@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, signal } from '@angular/core';
+import { Component, HostListener, inject, signal, DOCUMENT } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -23,6 +23,8 @@ export class AppComponent {
   dialog = inject(MatDialog);
   showMenuDialog = signal<boolean>(false);
   isScrolled = signal<boolean>(false);
+  private document = inject(DOCUMENT);
+  themes = signal<string[]>(['blue', 'dark-blue', 'purple', 'dark-purple']);
 
   isActive(url: string, prefix: boolean = false): string {
     return (prefix && this.routeEvent()?.urlAfterRedirects.startsWith(url)) || url === this.routeEvent()?.urlAfterRedirects ? 'mat-tonal-button' : 'mat-button';
@@ -48,4 +50,10 @@ export class AppComponent {
     const scrollThreshold = 100;
       this.isScrolled.set((window.pageYOffset > scrollThreshold));
   }
+
+  changeTheme(theme: string) {
+    this.document.body.classList.remove(...this.themes());
+    this.document.body.classList.add(theme);
+  }
+
 }

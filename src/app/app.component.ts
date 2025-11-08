@@ -8,12 +8,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Event, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { LoadingSpinnerComponent } from '@app/lib/component/loading-spinner/loading-spinner.component';
-import { MenuComponent } from '@app/lib/component/menu/menu.component';
+import { PhoneMenuComponent } from '@app/lib/component/menu/phone-menu.component';
 import { filter } from 'rxjs/operators';
+import { ReplacePipe } from '@app/lib/pipe/replace.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatButtonModule, MatMenuModule, MatIconModule, RouterLink, MatToolbarModule, MatDividerModule, LoadingSpinnerComponent],
+  imports: [RouterOutlet, MatButtonModule, MatMenuModule, MatIconModule, RouterLink, MatToolbarModule, MatDividerModule, LoadingSpinnerComponent, ReplacePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -24,14 +25,14 @@ export class AppComponent {
   showMenuDialog = signal<boolean>(false);
   isScrolled = signal<boolean>(false);
   private document = inject(DOCUMENT);
-  themes = signal<string[]>(['theme-blue', 'theme-purple', 'theme-green', 'theme-red', 'theme-dark-blue']);
+  themes = signal<string[]>(['theme-blue', 'theme-purple', 'theme-green', 'theme-red', 'theme-dark']);
 
   isActive(url: string, prefix: boolean = false): string {
     return (prefix && this.routeEvent()?.urlAfterRedirects.startsWith(url)) || url === this.routeEvent()?.urlAfterRedirects ? 'mat-tonal-button' : 'mat-button';
   }
   openDialog(): void {
     if (!this.showMenuDialog()) {
-      this.dialog.open(MenuComponent, {
+      this.dialog.open(PhoneMenuComponent, {
         position: { top: '64px' },
         autoFocus: false,
         width: '100%',

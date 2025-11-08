@@ -10,13 +10,13 @@ export interface DialogMenu {
 }
 
 @Component({
-  selector: 'app-menu',
+  selector: 'app-phone-menu',
   imports: [ RouterLink, MatDividerModule, MatIconModule, MatButtonModule, MatDialogClose],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+  templateUrl: './phone-menu.component.html',
+  styleUrl: './phone-menu.component.scss'
 
 })
-export class MenuComponent {
+export class PhoneMenuComponent {
 
   readonly data = inject<DialogMenu>(MAT_DIALOG_DATA);
 

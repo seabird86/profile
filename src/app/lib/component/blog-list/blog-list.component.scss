@@ -42,7 +42,7 @@
             width: 100%;
             text-align: center;
             font: 300 0.8rem / 1.2rem Roboto;
-
+            color: var(--mat-cus-on-surface-primary);
             i {
                 font-size: 0.7rem;
             }
@@ -60,15 +60,6 @@
         mat-card-content {
             h3 {
                 font-weight: 500;
-
-                a {
-                    color: var(--mat-sys-primary);
-
-                    &:hover {
-                        color: var(--mat-sys-tertiary);
-                    }
-                }
-
                 text-align: center;
             }
 
@@ -86,16 +77,6 @@
             @media (max-width: 780px) {
                 min-height: 30px;
                 height: unset;
-            }
-
-            @include mat.chips-overrides((label-text-color: var(--mat-sys-on-primary),
-                    outline-width: 0px,
-                    label-text-size: 0.7rem,
-                    label-text-weight: 200,
-                    container-height: 1.5rem));
-
-            mat-chip {
-                background-color: var(--mat-sys-primary);
             }
         }
     }

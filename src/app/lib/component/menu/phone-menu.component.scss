@@ -1,0 +1,16 @@
+:host {
+    height: 100%;
+
+    button {
+        border-radius: 0px;
+        background-color: var(--mat-toolbar-container-background-color);
+        color: var(--mat-toolbar-container-text-color);
+
+
+    }
+
+    .mat-tonal-button {
+        background-color: var(--mat-button-tonal-container-color, var(--mat-sys-secondary-container));
+        color: var(--mat-sys-primary);
+    }
+}

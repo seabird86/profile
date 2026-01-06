@@ -46,7 +46,7 @@ export class AppComponent {
     }
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onWindowScroll() {
     const scrollThreshold = 100;
     this.isScrolled.set((window.pageYOffset > scrollThreshold));

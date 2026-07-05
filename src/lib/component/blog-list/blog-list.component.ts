@@ -4,11 +4,11 @@ import { DatePipe } from '@angular/common';
 import { HttpParams } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { PageEvent, MatPaginatorModule } from '@angular/material/paginator';
-import { BlogService } from '@app/lib/api/blog.service';
-import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
-import { Params } from '@app/lib/constants/constants';
-import { Page } from '@app/lib/api/model/pagination';
-import { environment } from '../../../../environments/environment';
+import { BlogService } from '@lib/api/blog.service';
+import { BlogMetadata } from '@lib/api/model/blog-metadata';
+import { Params } from '@lib/constants/constants';
+import { Page } from '@lib/api/model/pagination';
+import { environment } from '@env/environment';
 import { MatChipsModule } from '@angular/material/chips';
 
 @Component({

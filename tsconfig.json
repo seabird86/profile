@@ -24,6 +24,12 @@
       "@app/*": [
         "./app/*"
       ],
+      "@lib/*": [
+        "./lib/*"
+      ],
+      "@env/*": [
+        "./env/*"
+      ],
     }
   },
   "angularCompilerOptions": {

@@ -47,7 +47,7 @@ import { Directive, input, ElementRef, SecurityContext, OnInit, Injectable, numb
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { HLJSApi } from 'highlight.js';
-import { StringUtils } from '@app/lib/utils/string.utils';
+import { StringUtils } from '@lib/utils/string.utils';
 
 interface HLJSLineNumber {
   lineNumbersBlock(el: HTMLElement, option: {

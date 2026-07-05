@@ -92,6 +92,20 @@
     }
   },
   {
+    "name": "design/restful-api",
+    "attributes": {
+      "title": "Design a RESTful API",
+      "date": "2024-05-01T00:00:00.000Z",
+      "readingTime": "3 min read",
+      "tags": [
+        "restful",
+        "Design"
+      ],
+      "summary": "The best practices to design an API following the RESTful standard",
+      "image": "restful.png"
+    }
+  },
+  {
     "name": "angular/onbase-ocr",
     "attributes": {
       "title": "Using Tesseract OCR to redact PII in OnBase",

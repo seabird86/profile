@@ -7,10 +7,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Event, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { LoadingSpinnerComponent } from '@app/lib/component/loading-spinner/loading-spinner.component';
-import { PhoneMenuComponent } from '@app/lib/component/menu/phone-menu.component';
+import { LoadingSpinnerComponent } from '@lib/component/loading-spinner/loading-spinner.component';
+import { PhoneMenuComponent } from '@lib/component/menu/phone-menu.component';
 import { filter } from 'rxjs/operators';
-import { ReplacePipe } from '@app/lib/pipe/replace.pipe';
+import { ReplacePipe } from '@lib/pipe/replace.pipe';
 
 @Component({
   selector: 'app-root',

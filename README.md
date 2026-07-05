@@ -1,12 +1,14 @@
-# Angular CLI
+# Command
 
 - `ng serve`
+- `npm run blog` -> Generate metadata of blogs
 - `ng generate component component-name`
 - `ng generate directive|pipe|service|class|guard|interface|enum|module`
 - `ng build` -> `dist/` directory
 - `ng test`
 - `ng e2e`
 - `ng help`
+
 
 # URL path (nginx)
 

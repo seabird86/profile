@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Params } from '@app/lib/constants/constants';
-import { BlogMetadata } from '@app/lib/api/model/blog-metadata';
-import { Page } from '@app/lib/api/model/pagination';
-import { environment } from '../../../environments/environment';
-import { Builder } from '@app/lib/utils/builder.utils';
+import { Params } from '@lib/constants/constants';
+import { BlogMetadata } from '@lib/api/model/blog-metadata';
+import { Page } from '@lib/api/model/pagination';
+import { environment } from '@env/environment';
+import { Builder } from '@lib/utils/builder.utils';
 
 
 @Injectable({

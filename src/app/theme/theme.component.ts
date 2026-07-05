@@ -1,6 +1,6 @@
 import { Component, computed, resource, signal } from '@angular/core';
 import { httpResource } from '@angular/common/http';
-import { Builder } from '@app/lib/utils/builder.utils';
+import { Builder } from '@lib/utils/builder.utils';
 
 interface Attribute {
     [key: string]: string;
